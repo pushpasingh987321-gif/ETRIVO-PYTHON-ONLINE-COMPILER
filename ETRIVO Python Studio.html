@@ -1,0 +1,1924 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-[#040406] text-zinc-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+  
+  <!-- SEO Primary Meta Tags with Highest Search Volume Keywords -->
+  <title>ETRIVO — Online Python Compiler | Free Python Online Editor, IDE & IDLE Terminal</title>
+  <meta name="title" content="ETRIVO — Online Python Compiler | Free Python Online Editor, IDE & IDLE Terminal">
+  <meta name="description" content="ETRIVO is a free, blazing-fast online Python compiler, editor, and interactive IDLE terminal. Write, compile, and run Python 3 code directly in your browser with real-time execution, interactive stream input, zero installation, and complete privacy.">
+  <meta name="keywords" content="online python compiler, python compiler online, python online compiler, python online editor, online python editor, run python online, python compiler, python online, python interpreter online, online python interpreter, python ide online, online python ide, python idle online, online python idle, python 3 compiler online, online python 3 compiler, free python compiler online, free online python compiler, python code runner online, python online terminal, python shell online, execute python online, compile python online, python in browser, web python compiler, best online python compiler, python programming online, python sandbox online, python playground online, online python console, interactive python online, python online runner, learn python online, python code editor online, python script runner online, browser python interpreter, lightweight python online editor, etrivo python compiler, etrivo python studio">
+  <meta name="author" content="ETRIVO">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="application-name" content="ETRIVO Python Studio">
+  <meta name="apple-mobile-web-app-title" content="ETRIVO Python">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#040406">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c89f6e' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'%3E%3C/circle%3E%3Cpath d='M12 3a9 9 0 0 0 0 18 6.5 6.5 0 0 1 0-18z' fill='%23c89f6e' fill-opacity='0.25'%3E%3C/path%3E%3C/svg%3E">
+  <link rel="canonical" href="https://etrivo.com/">
+
+  <!-- Open Graph / Facebook SEO -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://etrivo.com/">
+  <meta property="og:title" content="ETRIVO — Online Python Compiler & Free Python Online Editor">
+  <meta property="og:description" content="Write, compile, and run Python 3 code online instantly. Free, lightweight in-browser Python compiler, interactive editor, and IDLE shell with zero setup and complete privacy.">
+  <meta property="og:site_name" content="ETRIVO">
+
+  <!-- Twitter Card SEO -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://etrivo.com/">
+  <meta name="twitter:title" content="ETRIVO — Online Python Compiler & Python Online Editor">
+  <meta name="twitter:description" content="Run Python 3 online with ETRIVO's fast in-browser compiler, code editor, and interactive IDLE terminal.">
+
+  <!-- Schema.org JSON-LD Structured Data for High Search Visibility -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ETRIVO Online Python Compiler",
+    "alternateName": [
+      "ETRIVO Python Studio",
+      "ETRIVO Python Online Editor",
+      "ETRIVO Python IDLE",
+      "ETRIVO Python Interpreter",
+      "Online Python Compiler",
+      "Python Online Editor",
+      "Python 3 Online Compiler"
+    ],
+    "url": "https://etrivo.com/",
+    "description": "High-performance online Python compiler, editor, and interactive IDLE terminal. Run Python 3 code in browser with instant execution, interactive stream input, zero setup, and client-side privacy.",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Online Python 3 Compiler",
+      "Real-time Python Code Execution",
+      "Interactive IDLE Terminal Shell",
+      "Syntax Highlighting and Auto-close Brackets",
+      "100% Client-side Privacy Protected Execution",
+      "Mobile and Desktop Responsive Interface"
+    ],
+    "keywords": "online python compiler, python compiler online, python online editor, online python editor, run python online, python compiler, python online ide, python idle online, free python compiler online, python 3 compiler online, python code runner online, python online terminal"
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['"Fira Code"', 'Consolas', 'Monaco', 'Courier New', 'monospace'],
+          },
+          colors: {
+            studio: {
+              void: '#040406',
+              graphite: '#07070a',
+              surface: '#0c0d12',
+              elevated: '#11131a',
+              border: 'rgba(255, 255, 255, 0.04)',
+              borderHover: 'rgba(255, 255, 255, 0.08)',
+            },
+            eclipse: {
+              DEFAULT: '#c89f6e',
+              muted: '#9e7b52',
+              hover: '#d6b081',
+              active: '#ba905e',
+              glow: 'rgba(200, 159, 110, 0.15)',
+              ambient: 'rgba(200, 159, 110, 0.035)',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Fonts: Inter & Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CodeMirror 5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/closebrackets.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/matchbrackets.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/selection/active-line.min.js" crossorigin="anonymous"></script>
+
+  <!-- In-Browser Python 3 Runtime (Skulpt) -->
+  <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt-stdlib.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* Cinematic Background with Dynamic Depth Spheres */
+    body {
+      background-color: #040406;
+      background-image: 
+        radial-gradient(circle 900px at 50% -12%, rgba(200, 159, 110, 0.055) 0%, rgba(4, 4, 6, 0) 70%),
+        radial-gradient(circle 800px at 90% 85%, rgba(26, 28, 42, 0.45) 0%, rgba(4, 4, 6, 0) 75%),
+        radial-gradient(circle 600px at 8% 50%, rgba(22, 23, 34, 0.5) 0%, rgba(4, 4, 6, 0) 65%);
+      background-attachment: fixed;
+    }
+
+    /* 2026 Apple Liquid Glass Header */
+    .apple-glass-header {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.045) 0%, rgba(8, 9, 13, 0.65) 100%);
+      backdrop-filter: blur(28px) saturate(190%);
+      -webkit-backdrop-filter: blur(28px) saturate(190%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.065);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), inset 0 -1px 0 rgba(255, 255, 255, 0.02);
+    }
+
+    /* 2026 Apple Ultra Liquid Glass Morphism Surfaces */
+    .emerge-surface {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(18, 20, 27, 0.55) 45%, rgba(8, 9, 13, 0.72) 100%);
+      backdrop-filter: blur(36px) saturate(210%);
+      -webkit-backdrop-filter: blur(36px) saturate(210%);
+      box-shadow: 
+        inset 0 1px 1px 0 rgba(255, 255, 255, 0.18),
+        inset 0 -1px 1px 0 rgba(0, 0, 0, 0.45),
+        0 16px 48px -12px rgba(0, 0, 0, 0.8),
+        0 0 24px -2px rgba(200, 159, 110, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 700ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .emerge-surface:hover {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.075) 0%, rgba(24, 27, 38, 0.62) 45%, rgba(11, 12, 18, 0.78) 100%);
+      border-color: rgba(200, 159, 110, 0.28);
+      box-shadow: 
+        inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.3),
+        inset 0 -1px 1px 0 rgba(0, 0, 0, 0.5),
+        0 20px 60px -10px rgba(0, 0, 0, 0.85),
+        0 0 35px -2px rgba(200, 159, 110, 0.16);
+    }
+
+    /* 2026 Apple Frosted Glass Controls */
+    .ghost-control {
+      background: rgba(255, 255, 255, 0.025);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.12), 0 4px 16px rgba(0, 0, 0, 0.25);
+      transition: all 650ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .ghost-control:hover {
+      background: rgba(255, 255, 255, 0.085);
+      border-color: rgba(255, 255, 255, 0.22);
+      box-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.28), 0 6px 20px rgba(0, 0, 0, 0.35);
+      color: #ffffff;
+    }
+
+    /* Apple Liquid Amber Glass Action Button */
+    .apple-glass-run-btn {
+      background: linear-gradient(180deg, rgba(228, 186, 137, 0.95) 0%, rgba(190, 147, 97, 0.92) 50%, rgba(168, 126, 78, 0.95) 100%) !important;
+      backdrop-filter: blur(24px) saturate(190%);
+      -webkit-backdrop-filter: blur(24px) saturate(190%);
+      border: 1px solid rgba(255, 255, 255, 0.4) !important;
+      box-shadow: 
+        inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.65),
+        inset 0 -1px 1px 0 rgba(0, 0, 0, 0.22),
+        0 4px 20px rgba(200, 159, 110, 0.35),
+        0 0 32px rgba(200, 159, 110, 0.25) !important;
+    }
+    .apple-glass-run-btn:hover {
+      background: linear-gradient(180deg, rgba(238, 196, 147, 0.98) 0%, rgba(202, 159, 109, 0.95) 50%, rgba(178, 136, 88, 0.98) 100%) !important;
+      box-shadow: 
+        inset 0 1px 2px 0 rgba(255, 255, 255, 0.75),
+        0 6px 26px rgba(200, 159, 110, 0.48),
+        0 0 40px rgba(200, 159, 110, 0.35) !important;
+    }
+
+    /* Apple Dynamic Island / Glass Capsule Toast */
+    .apple-glass-toast {
+      background: rgba(12, 13, 18, 0.74) !important;
+      backdrop-filter: blur(32px) saturate(210%) !important;
+      -webkit-backdrop-filter: blur(32px) saturate(210%) !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      box-shadow: 
+        inset 0 1px 1.2px 0 rgba(255, 255, 255, 0.32),
+        inset 0 -1px 1px 0 rgba(0, 0, 0, 0.5),
+        0 14px 45px rgba(0, 0, 0, 0.75) !important;
+    }
+
+    /* Clean, Authentic Text Selection (Real selection matching output screen) */
+    ::selection {
+      background: rgba(200, 159, 110, 0.3) !important;
+      color: #ffffff !important;
+    }
+    ::-moz-selection {
+      background: rgba(200, 159, 110, 0.3) !important;
+      color: #ffffff !important;
+    }
+
+    /* CodeMirror Authentic Text Selection */
+    .CodeMirror-selected {
+      background: rgba(200, 159, 110, 0.28) !important;
+    }
+
+    .CodeMirror-focused .CodeMirror-selected {
+      background: rgba(200, 159, 110, 0.35) !important;
+    }
+
+    .CodeMirror-line::selection, 
+    .CodeMirror-line > span::selection,
+    .CodeMirror-line > span > span::selection {
+      background: rgba(200, 159, 110, 0.35) !important;
+      color: #ffffff !important;
+    }
+
+    /* Clean, Professional Cursor (Calm, crisp, without over-glowing blinking) */
+    .CodeMirror-cursor {
+      border-left: 2px solid #c89f6e !important;
+      border-right: none !important;
+      width: 0 !important;
+    }
+
+    /* Scrollbars that seamlessly dissolve into liquid obsidian */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 9999px;
+      transition: background 600ms ease;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(200, 159, 110, 0.35);
+    }
+
+    /* Draggable Splitter Handle */
+    .resizer-handle {
+      touch-action: none;
+      transition: background-color 800ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 800ms ease;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.025);
+    }
+    .resizer-handle:hover,
+    .resizer-handle.dragging {
+      background-color: #c89f6e !important;
+      box-shadow: 0 0 16px rgba(200, 159, 110, 0.4);
+    }
+
+    /* Cinematic breath animation */
+    @keyframes eclipseAura {
+      0%, 100% { opacity: 0.85; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(0.92); }
+    }
+    .status-dot-pulse {
+      animation: eclipseAura 3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .CodeMirror {
+      height: 100% !important;
+      width: 100% !important;
+      font-family: 'Fira Code', Consolas, Monaco, monospace !important;
+      font-size: 14.5px !important;
+      background-color: transparent !important;
+      color: #e4e4e9 !important;
+      line-height: 1.75 !important;
+      direction: ltr !important;
+      text-align: left !important;
+    }
+
+    .CodeMirror-gutters {
+      background-color: transparent !important;
+      border-right: 1px solid rgba(255, 255, 255, 0.04) !important;
+      padding-right: 10px !important;
+    }
+
+    .CodeMirror-linenumber {
+      color: #32343f !important;
+      padding: 0 10px 0 6px !important;
+      font-size: 12px !important;
+      font-family: 'Fira Code', monospace !important;
+      letter-spacing: -0.02em;
+      transition: color 500ms ease;
+    }
+
+    .CodeMirror-activeline-background {
+      background: rgba(200, 159, 110, 0.025) !important;
+    }
+
+    .CodeMirror-activeline .CodeMirror-linenumber {
+      color: #c89f6e !important;
+    }
+
+    .CodeMirror textarea {
+      opacity: 0.01 !important;
+      font-size: 16px !important;
+    }
+
+    /* Celestial Code Highlighting */
+    .cm-s-zenDark .cm-keyword { color: #d09f74 !important; font-weight: 500; }
+    .cm-s-zenDark .cm-def { color: #eed4b7 !important; }
+    .cm-s-zenDark .cm-variable { color: #e4e5eb !important; }
+    .cm-s-zenDark .cm-variable-2 { color: #c4c6d0 !important; }
+    .cm-s-zenDark .cm-property { color: #eed4b7 !important; }
+    .cm-s-zenDark .cm-operator { color: #858899 !important; }
+    .cm-s-zenDark .cm-string { color: #b7c4a8 !important; }
+    .cm-s-zenDark .cm-string-2 { color: #b7c4a8 !important; }
+    .cm-s-zenDark .cm-number { color: #dfb288 !important; }
+    .cm-s-zenDark .cm-comment { color: #474a58 !important; font-style: italic; }
+    .cm-s-zenDark .cm-builtin { color: #c89f6e !important; }
+    .cm-s-zenDark .cm-atom { color: #d69894 !important; }
+    .cm-s-zenDark .cm-meta { color: #858899 !important; }
+    .cm-s-zenDark .cm-bracket { color: #858899 !important; }
+
+    /* Universal Mobile Safe Area & Zero-Cropping Viewport Engine */
+    :root {
+      --sat: env(safe-area-inset-top, 0px);
+      --sab: env(safe-area-inset-bottom, 0px);
+      --sal: env(safe-area-inset-left, 0px);
+      --sar: env(safe-area-inset-right, 0px);
+    }
+    html, body {
+      height: 100%;
+      height: 100dvh;
+      min-height: -webkit-fill-available;
+      overflow: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+
+    /* Snippet Library High-Performance Smooth Mobile Scrolling */
+    #snippetsModalCard {
+      background: #090a10 !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.95), 0 0 40px rgba(200, 159, 110, 0.1) !important;
+    }
+    #snippetCardsList {
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+      will-change: scroll-position;
+      transform: translateZ(0);
+      contain: content;
+    }
+    #categoryChipsContainer {
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+    }
+
+    /* Snippet Library Custom Scrollbar */
+    .snippet-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .snippet-scrollbar::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 4px;
+    }
+    .snippet-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(200, 159, 110, 0.22);
+      border-radius: 4px;
+    }
+    .snippet-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: rgba(200, 159, 110, 0.45);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Snippet Card Active Highlight */
+    .snippet-card-active {
+      background: rgba(200, 159, 110, 0.08) !important;
+      border-color: rgba(200, 159, 110, 0.45) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), inset 0 0 16px rgba(200, 159, 110, 0.06);
+    }
+  </style>
+</head>
+
+<body class="h-full flex flex-col overflow-hidden bg-[#040406] text-zinc-100 font-sans antialiased">
+
+  <!-- SEO Semantic Metadata (Accessible to Web Crawlers & Screen Readers) -->
+  <section class="sr-only" aria-label="About ETRIVO Online Python Compiler">
+    <h1>ETRIVO — Online Python Compiler & Free Python Online Editor</h1>
+    <p>ETRIVO is a high-speed, free online Python compiler, interpreter, and cloud-free code editor. Run Python 3 programs directly in your web browser with real-time IDLE terminal output, zero installation, and guaranteed client-side privacy.</p>
+    <h2>Free Online Python IDE, Terminal & Code Runner</h2>
+    <p>Target search keywords: online python compiler, python compiler online, python online editor, online python editor, run python online, python interpreter online, online python interpreter, python online ide, online python ide, python idle online, online python idle, python 3 compiler online, online python 3 compiler, free python compiler online, free online python compiler, python code runner online, python online terminal, python shell online, execute python online, compile python online, web python compiler, in-browser python compiler, python playground online, best online python compiler.</p>
+  </section>
+
+  <!-- Top Studio Header: Apple Liquid Glass bar with prominent ETRIVO branding -->
+  <header class="h-14 sm:h-16 px-2.5 sm:px-6 md:px-8 flex items-center justify-between flex-shrink-0 z-20 apple-glass-header transition-colors duration-700 w-full max-w-full overflow-hidden">
+    <!-- Left: ETRIVO Brand mark & Engine indicator -->
+    <div class="flex items-center gap-2 sm:gap-5 min-w-0 flex-shrink">
+      <div class="flex items-center gap-2 sm:gap-3 min-w-0">
+        <!-- Celestial Glyph with liquid glass refraction -->
+        <div class="relative w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-xl bg-white/[0.03] border border-white/[0.08] shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] flex-shrink-0">
+          <div class="absolute inset-0 rounded-xl bg-[#c89f6e]/15 blur-sm"></div>
+          <svg class="w-4 h-4 sm:w-5 sm:h-5 text-[#c89f6e] relative z-10 transition-transform duration-700 hover:rotate-12 drop-shadow-[0_0_8px_rgba(200,159,110,0.5)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 3a9 9 0 0 0 0 18 6.5 6.5 0 0 1 0-18z" fill="currentColor" fill-opacity="0.15"></path>
+          </svg>
+        </div>
+        
+        <!-- ETRIVO Branding -->
+        <div class="flex flex-col justify-center select-none leading-none min-w-0">
+          <span class="text-base sm:text-2xl font-bold tracking-[0.16em] sm:tracking-[0.24em] text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 via-white to-zinc-300 drop-shadow-[0_2px_12px_rgba(255,255,255,0.18)] uppercase whitespace-nowrap">ETRIVO</span>
+          <span class="text-[7px] sm:text-[9.5px] tracking-[0.12em] sm:tracking-[0.22em] text-[#c89f6e]/90 font-mono uppercase font-light mt-0.5 truncate max-w-[150px] xs:max-w-none">PYTHON® ONLINE COMPILER</span>
+        </div>
+      </div>
+
+      <!-- Engine Status Indicator -->
+      <div id="engineStatusBadge" class="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-light tracking-wider bg-white/[0.03] border border-white/[0.06] text-zinc-300 backdrop-blur-md shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)] select-none transition-all duration-700 flex-shrink-0">
+        <span id="engineStatusDot" class="w-1.5 h-1.5 rounded-full bg-[#c89f6e] shadow-[0_0_8px_#c89f6e]"></span>
+        <span id="engineStatusText" class="tracking-wide">Python Ready</span>
+      </div>
+    </div>
+
+    <!-- Center: Minimalist shortcut hint -->
+    <div class="hidden md:flex items-center text-xs tracking-wider font-light text-zinc-500 gap-2 select-none">
+      <span class="opacity-70">Execute</span>
+      <kbd class="px-2 py-0.5 text-[10px] font-mono text-zinc-400 bg-white/[0.035] border border-white/[0.08] rounded shadow-inner backdrop-blur-sm">Ctrl</kbd>
+      <span class="opacity-50">+</span>
+      <kbd class="px-2 py-0.5 text-[10px] font-mono text-zinc-400 bg-white/[0.035] border border-white/[0.08] rounded shadow-inner backdrop-blur-sm">Enter</kbd>
+    </div>
+
+    <!-- Right: Studio Controls (Snippets, Clear & Run) -->
+    <div class="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
+      <!-- Algorithm Library Trigger -->
+      <button id="snippetsBtn" type="button" title="Open Algorithm Library (Ctrl+K)" class="ghost-control h-8 sm:h-9 px-2 sm:px-3.5 rounded-lg text-[11px] sm:text-xs font-light tracking-wider text-zinc-300 hover:text-white flex items-center gap-1.5 sm:gap-2 transition-all">
+        <svg class="w-3.5 h-3.5 text-[#c89f6e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          <line x1="9" y1="7" x2="15" y2="7"></line>
+          <line x1="9" y1="11" x2="15" y2="11"></line>
+        </svg>
+        <span class="inline">Library</span>
+        <kbd class="hidden lg:inline-block px-1.5 py-0.5 text-[9px] font-mono text-zinc-400 bg-white/[0.04] border border-white/[0.08] rounded shadow-inner">⌘K</kbd>
+      </button>
+
+      <!-- Clear Code / Console Button -->
+      <button id="clearEditorBtn" type="button" title="Clear current canvas" class="ghost-control h-8 sm:h-9 px-2 sm:px-3 rounded-lg text-xs font-light tracking-wider text-zinc-400 flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 6h18"></path>
+          <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+          <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+        </svg>
+        <span class="hidden sm:inline">Clear</span>
+      </button>
+
+      <!-- Primary Liquid Glass Amber Run Button -->
+      <button id="runBtn" type="button" class="relative group h-8 sm:h-9 px-3 sm:px-5 rounded-lg apple-glass-run-btn disabled:opacity-30 disabled:cursor-not-allowed text-[#070709] font-medium text-[11px] sm:text-xs tracking-[0.14em] sm:tracking-[0.16em] uppercase active:scale-[0.98] transition-all duration-700 flex items-center gap-1.5 sm:gap-2.5 select-none overflow-hidden">
+        <!-- Subtle internal liquid sheen -->
+        <div class="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+
+        <!-- Spinner Icon -->
+        <svg id="runSpinner" class="animate-spin w-3.5 h-3.5 text-[#070709] hidden" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle>
+          <path class="opacity-80" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+        </svg>
+        
+        <!-- Play Icon -->
+        <svg id="runPlayIcon" class="w-3 h-3 fill-current" viewBox="0 0 24 24">
+          <path d="M5 3l14 9-14 9V3z"></path>
+        </svg>
+        
+        <span id="runBtnText" class="font-semibold">Run</span>
+        <span class="hidden sm:inline-block text-[10px] opacity-65 font-mono tracking-tight font-normal">⌘↵</span>
+      </button>
+    </div>
+  </header>
+  <!-- Main Workspace: Distinct Pages (Editor Page & Output Page) -->
+  <main id="workspace" class="flex-1 relative overflow-hidden bg-transparent">
+    
+    <!-- PAGE 1: Code Editor Screen (Full Page - Extends to the absolute end of the screen without closed bottom) -->
+    <div id="editorPage" class="w-full h-full flex flex-col px-2 sm:px-5 pt-2 sm:pt-3 pb-0 transition-opacity duration-500">
+      <div class="w-full h-full flex-1 min-h-0 relative rounded-t-2xl rounded-b-none emerge-surface overflow-hidden flex flex-col border-b-0 p-2 sm:p-3 pb-0 sm:pb-0">
+        <div id="codeEditorContainer" class="flex-1 w-full h-full min-h-0 relative"></div>
+        
+        <!-- Editor Bottom Status Bar: Flush to the absolute end of the screen -->
+        <div class="h-7 -mx-2 sm:-mx-3 px-2.5 sm:px-6 border-t border-white/[0.04] bg-white/[0.015] backdrop-blur-md flex items-center justify-between text-[10px] sm:text-[11px] text-zinc-500 font-mono flex-shrink-0 select-none w-full overflow-hidden">
+          <div class="flex items-center gap-2 sm:gap-5 flex-shrink-0">
+            <span id="cursorPosition" class="text-zinc-400 font-light whitespace-nowrap">Ln 1, Col 1</span>
+            <span id="codeLength" class="text-zinc-500 font-light hidden xs:inline whitespace-nowrap">0 chars</span>
+          </div>
+
+          <!-- Legal & Policies Links -->
+          <div class="flex items-center gap-2 sm:gap-4 font-sans text-[9.5px] sm:text-[11px] tracking-wide min-w-0 overflow-x-auto no-scrollbar">
+            <button id="openTermsLink" type="button" class="text-zinc-400 hover:text-[#c89f6e] transition-colors duration-300 whitespace-nowrap"><span class="hidden sm:inline">Terms & Conditions</span><span class="sm:hidden">Terms</span></button>
+            <span class="text-white/10">•</span>
+            <button id="openPrivacyLink" type="button" class="text-zinc-400 hover:text-[#c89f6e] transition-colors duration-300 whitespace-nowrap"><span class="hidden sm:inline">Privacy Policy</span><span class="sm:hidden">Privacy</span></button>
+            <span class="text-white/10 hidden sm:inline">•</span>
+            <button id="openAboutLink" type="button" class="hidden sm:inline text-zinc-400 hover:text-[#c89f6e] transition-colors duration-300 whitespace-nowrap">PSF & Disclaimer</button>
+          </div>
+
+          <div class="hidden md:flex items-center gap-3.5 flex-shrink-0">
+            <span class="text-zinc-400 tracking-wider uppercase text-[10px]">ETRIVO Studio</span>
+            <span class="w-1 h-1 rounded-full bg-white/20"></span>
+            <span class="text-[#c89f6e]/80">Skulpt Python 3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 2: Dedicated Output Terminal Screen (Extends to the absolute end of the screen without closed bottom) -->
+    <div id="outputPage" class="hidden w-full h-full flex flex-col px-2 sm:px-5 pt-2 sm:pt-3 pb-0 transition-opacity duration-500 overflow-hidden">
+      <div class="w-full h-full flex-1 min-h-0 emerge-surface rounded-t-2xl rounded-b-none overflow-hidden flex flex-col border-b-0 shadow-[0_24px_80px_rgba(0,0,0,0.85),0_0_40px_rgba(200,159,110,0.12)] border border-white/[0.09]">
+        
+        <!-- Terminal Header with Back to Code button -->
+        <div class="h-11 px-4 sm:px-6 flex items-center justify-between border-b border-white/[0.06] bg-white/[0.025] backdrop-blur-xl flex-shrink-0 select-none">
+          <div class="flex items-center gap-3">
+            <!-- Return to Editor Button -->
+            <button id="backToEditorBtn" type="button" title="Back to Code Editor (Esc)" class="ghost-control h-7 px-3 rounded-lg text-xs font-medium text-zinc-200 flex items-center gap-1.5 border border-white/[0.08] hover:border-[#c89f6e]/40 hover:text-white transition-all duration-300">
+              <svg class="w-3.5 h-3.5 text-[#c89f6e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5"></path>
+                <path d="m12 19-7-7 7-7"></path>
+              </svg>
+              <span class="text-xs">Editor</span>
+            </button>
+            <div class="h-4 w-px bg-white/[0.08]"></div>
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-200">Terminal Output</span>
+            <span id="execStatsBadge" class="hidden text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/[0.04] border border-white/[0.07] text-[#c89f6e] tracking-tight backdrop-blur-sm"></span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <!-- Copy Console Button -->
+            <button id="copyConsoleBtn" type="button" title="Copy terminal output" class="ghost-control p-1.5 rounded-lg text-zinc-400 hover:text-zinc-200">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+
+            <!-- Clear Console Button -->
+            <button id="clearConsoleBtn" type="button" title="Clear terminal output" class="ghost-control p-1.5 rounded-lg text-zinc-400 hover:text-zinc-200">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m4.93 4.93 14.14 14.14"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Output Scroll Area -->
+        <div id="consoleContainer" class="flex-1 min-h-0 p-4 sm:p-6 font-mono text-[13px] sm:text-[14px] leading-relaxed overflow-y-auto select-text space-y-1.5 relative bg-black/25">
+          <div id="emptyOutputPlaceholder" class="h-full flex flex-col items-center justify-center text-zinc-600 select-none py-8">
+            <div class="relative w-12 h-12 mb-3 flex items-center justify-center opacity-30">
+              <div class="absolute inset-0 rounded-full border border-white/20"></div>
+              <div class="w-5 h-5 rounded-full bg-white/40 blur-[1px]"></div>
+            </div>
+            <p class="text-xs font-light tracking-widest uppercase text-zinc-400">Awaiting execution</p>
+            <p class="text-[10px] font-mono text-zinc-600 mt-1">Tap Run in Editor to execute Python</p>
+          </div>
+        </div>
+
+        <!-- Terminal Bottom Status Bar: Flush to the absolute end of the screen -->
+        <div class="h-7 px-2.5 sm:px-6 border-t border-white/[0.04] bg-white/[0.015] backdrop-blur-md flex items-center justify-between text-[10px] sm:text-[11px] text-zinc-500 font-mono flex-shrink-0 select-none w-full overflow-hidden">
+          <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+            <span class="text-zinc-400 font-light whitespace-nowrap">Python 3 Shell</span>
+            <span class="w-1 h-1 rounded-full bg-white/20 hidden xs:inline"></span>
+            <span class="text-[#c89f6e]/80 hidden xs:inline whitespace-nowrap">Interactive Stream</span>
+          </div>
+
+          <div class="flex items-center gap-2 sm:gap-4 font-sans text-[9.5px] sm:text-[11px] tracking-wide min-w-0 overflow-x-auto no-scrollbar">
+            <button id="openTermsLinkTerminal" type="button" class="text-zinc-400 hover:text-[#c89f6e] transition-colors duration-300 whitespace-nowrap"><span class="hidden sm:inline">Terms & Conditions</span><span class="sm:hidden">Terms</span></button>
+            <span class="text-white/10">•</span>
+            <button id="openPrivacyLinkTerminal" type="button" class="text-zinc-400 hover:text-[#c89f6e] transition-colors duration-300 whitespace-nowrap"><span class="hidden sm:inline">Privacy Policy</span><span class="sm:hidden">Privacy</span></button>
+            <span class="text-white/10 hidden sm:inline">•</span>
+            <button id="openAboutLinkTerminal" type="button" class="hidden sm:inline text-zinc-400 hover:text-[#c89f6e] transition-colors duration-300 whitespace-nowrap">PSF & Disclaimer</button>
+          </div>
+
+          <div class="hidden md:flex items-center gap-3.5 flex-shrink-0">
+            <span class="text-zinc-400 tracking-wider uppercase text-[10px]">ETRIVO Studio</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  <!-- Notification Toast (Apple Dynamic Island Liquid Glass) -->
+  <div id="toast" class="fixed bottom-12 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full apple-glass-toast text-zinc-200 text-xs font-light tracking-wide transition-all duration-700 z-50 select-none opacity-0 pointer-events-none">
+    Notice
+  </div>
+
+  <!-- Legal & Policies Liquid Glass Modal Dialog -->
+  <div id="legalModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-xl opacity-0 pointer-events-none transition-opacity duration-300 select-none">
+    <div id="legalModalCard" class="w-full max-w-3xl max-h-[88vh] emerge-surface rounded-2xl flex flex-col overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.95),0_0_50px_rgba(200,159,110,0.18)] border border-white/10 scale-95 transition-transform duration-300">
+      
+      <!-- Modal Navigation Bar with Tabs and Close -->
+      <div class="h-14 px-4 sm:px-6 flex items-center justify-between border-b border-white/[0.08] bg-white/[0.025] flex-shrink-0">
+        <div class="flex items-center gap-1 sm:gap-2 overflow-x-auto no-scrollbar min-w-0 pr-2">
+          <button id="tabBtnTerms" type="button" class="whitespace-nowrap px-2.5 sm:px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-medium tracking-wide transition-all duration-300 text-[#c89f6e] bg-white/[0.07] border border-white/[0.1] flex-shrink-0">Terms & Conditions</button>
+          <button id="tabBtnPrivacy" type="button" class="whitespace-nowrap px-2.5 sm:px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-medium tracking-wide transition-all duration-300 text-zinc-400 hover:text-white flex-shrink-0">Privacy Policy</button>
+          <button id="tabBtnAbout" type="button" class="whitespace-nowrap px-2.5 sm:px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-medium tracking-wide transition-all duration-300 text-zinc-400 hover:text-white flex-shrink-0">PSF & Disclaimer</button>
+        </div>
+
+        <button id="closeLegalModalBtn" type="button" title="Close dialog (Esc)" class="ghost-control w-8 h-8 rounded-lg flex items-center justify-center text-zinc-400 hover:text-white">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Body (Dynamic Tab Content) -->
+      <div id="legalModalBody" class="flex-1 min-h-0 p-5 sm:p-7 overflow-y-auto font-sans text-xs sm:text-sm text-zinc-300 leading-relaxed space-y-5 select-text">
+        <!-- Content dynamically populated via JS -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="h-12 px-5 sm:px-6 flex items-center justify-between border-t border-white/[0.06] bg-white/[0.015] text-[11px] text-zinc-500 font-mono flex-shrink-0">
+        <span class="tracking-wider">ETRIVO Online Python Compiler • 2026</span>
+        <button id="closeLegalModalFooterBtn" type="button" class="ghost-control h-7 px-3.5 rounded-md text-xs font-sans text-zinc-300 hover:text-white">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Code Snippets & Algorithm Library Modal / Drawer -->
+  <div id="snippetsModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-xl flex items-center justify-center p-1 sm:p-4 md:p-6 opacity-0 pointer-events-none transition-opacity duration-300 select-none">
+    <div id="snippetsModalCard" class="w-full max-w-6xl h-[96dvh] sm:h-[92vh] max-h-[880px] bg-[#090a10] rounded-xl sm:rounded-2xl border border-white/10 flex flex-col overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.95),0_0_50px_rgba(200,159,110,0.12)] scale-95 transition-transform duration-300">
+      
+      <!-- Drawer Top Bar -->
+      <div class="h-12 sm:h-14 px-3 sm:px-6 flex items-center justify-between border-b border-white/[0.06] bg-white/[0.02] flex-shrink-0 w-full overflow-hidden">
+        <div class="flex items-center gap-2 sm:gap-3 min-w-0">
+          <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#c89f6e]/15 border border-[#c89f6e]/30 flex items-center justify-center flex-shrink-0">
+            <svg class="w-4 h-4 text-[#c89f6e]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              <line x1="9" y1="7" x2="15" y2="7"></line>
+              <line x1="9" y1="11" x2="15" y2="11"></line>
+            </svg>
+          </div>
+          <div class="min-w-0">
+            <h2 class="text-xs sm:text-base font-semibold text-zinc-100 flex items-center gap-1.5 sm:gap-2 truncate">
+              Algorithm Library
+              <span class="hidden sm:inline-block text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#c89f6e]/15 border border-[#c89f6e]/30 text-[#eed4b7]">CBSE 11/12 & Tier-1 Core</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
+          <!-- Mobile Tab Switcher -->
+          <div class="flex md:hidden items-center p-0.5 rounded-lg bg-white/[0.04] border border-white/[0.08] text-[11px]">
+            <button id="mobileTabBrowse" type="button" class="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md text-[#c89f6e] bg-white/[0.08] font-medium">Browse</button>
+            <button id="mobileTabPreview" type="button" class="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md text-zinc-400">Preview</button>
+          </div>
+
+          <kbd class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono text-zinc-400 bg-white/[0.035] border border-white/[0.08] rounded shadow-inner">ESC</kbd>
+          <button id="closeSnippetsModalBtn" type="button" title="Close Library (Esc)" class="ghost-control w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center text-zinc-400 hover:text-white">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Two-Column Drawer Split -->
+      <div class="flex-1 min-h-0 flex flex-col md:flex-row overflow-hidden">
+        
+        <!-- Left Column: Search, Category Chips, Snippet Card List -->
+        <div id="snippetsLeftCol" class="w-full md:w-[42%] lg:w-[38%] border-b md:border-b-0 md:border-r border-white/[0.06] flex flex-col min-h-0 bg-white/[0.015]">
+          <!-- Instant Search Box & Chips -->
+          <div class="p-3 sm:p-4 pb-2 flex-shrink-0">
+            <div class="relative flex items-center">
+              <svg class="w-4 h-4 text-zinc-500 absolute left-3 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input id="snippetSearchInput" type="text" placeholder="Search algorithms, topics, CBSE tags..." class="w-full h-9 pl-9 pr-8 rounded-lg bg-black/40 border border-white/[0.08] focus:border-[#c89f6e]/50 focus:ring-1 focus:ring-[#c89f6e]/30 text-xs text-zinc-200 placeholder-zinc-500 font-sans outline-none transition-all">
+              <button id="clearSearchBtn" type="button" class="hidden absolute right-2.5 text-zinc-500 hover:text-zinc-300 text-xs font-mono p-1">✕</button>
+            </div>
+
+            <!-- Category Filter Chips -->
+            <div id="categoryChipsContainer" class="flex items-center gap-1.5 overflow-x-auto py-2.5 no-scrollbar select-none text-[11px]">
+              <button class="snippet-cat-chip whitespace-nowrap px-2.5 py-1 rounded-full border transition-all text-[#c89f6e] bg-[#c89f6e]/15 border-[#c89f6e]/40 font-medium" data-cat="all">All (85)</button>
+              <button class="snippet-cat-chip whitespace-nowrap px-2.5 py-1 rounded-full border transition-all text-zinc-400 bg-white/[0.02] border-white/[0.06] hover:text-zinc-200 hover:border-white/[0.15]" data-cat="Getting Started">Getting Started</button>
+              <button class="snippet-cat-chip whitespace-nowrap px-2.5 py-1 rounded-full border transition-all text-zinc-400 bg-white/[0.02] border-white/[0.06] hover:text-zinc-200 hover:border-white/[0.15]" data-cat="Decision Making">Decision Making</button>
+              <button class="snippet-cat-chip whitespace-nowrap px-2.5 py-1 rounded-full border transition-all text-zinc-400 bg-white/[0.02] border-white/[0.06] hover:text-zinc-200 hover:border-white/[0.15]" data-cat="Iteration">Iteration</button>
+              <button class="snippet-cat-chip whitespace-nowrap px-2.5 py-1 rounded-full border transition-all text-zinc-400 bg-white/[0.02] border-white/[0.06] hover:text-zinc-200 hover:border-white/[0.15]" data-cat="Patterns">Patterns</button>
+              <button class="snippet-cat-chip whitespace-nowrap px-2.5 py-1 rounded-full border transition-all text-zinc-400 bg-white/[0.02] border-white/[0.06] hover:text-zinc-200 hover:border-white/[0.15]" data-cat="Strings">Strings</button>
+              <button class="snippet-cat-chip whitespace-nowrap px-2.5 py-1 rounded-full border transition-all text-zinc-400 bg-white/[0.02] border-white/[0.06] hover:text-zinc-200 hover:border-white/[0.15]" data-cat="Lists & Tuples">Lists & Tuples</button>
+              <button class="snippet-cat-chip whitespace-nowrap px-2.5 py-1 rounded-full border transition-all text-zinc-400 bg-white/[0.02] border-white/[0.06] hover:text-zinc-200 hover:border-white/[0.15]" data-cat="Dictionaries">Dictionaries</button>
+              <button class="snippet-cat-chip whitespace-nowrap px-2.5 py-1 rounded-full border transition-all text-zinc-400 bg-white/[0.02] border-white/[0.06] hover:text-zinc-200 hover:border-white/[0.15]" data-cat="Functions">Functions</button>
+              <button class="snippet-cat-chip whitespace-nowrap px-2.5 py-1 rounded-full border transition-all text-zinc-400 bg-white/[0.02] border-white/[0.06] hover:text-zinc-200 hover:border-white/[0.15]" data-cat="Searching & Sorting">Searching & Sorting</button>
+              <button class="snippet-cat-chip whitespace-nowrap px-2.5 py-1 rounded-full border transition-all text-zinc-400 bg-white/[0.02] border-white/[0.06] hover:text-zinc-200 hover:border-white/[0.15]" data-cat="Data Structures">Data Structures</button>
+              <button class="snippet-cat-chip whitespace-nowrap px-2.5 py-1 rounded-full border transition-all text-zinc-400 bg-white/[0.02] border-white/[0.06] hover:text-zinc-200 hover:border-white/[0.15]" data-cat="Recursion & Files">Recursion & Files</button>
+            </div>
+          </div>
+
+          <!-- Snippet Cards Scrollable Container -->
+          <div id="snippetCardsList" class="flex-1 min-h-0 overflow-y-auto px-3 sm:px-4 pb-4 space-y-2 snippet-scrollbar">
+            <!-- Dynamically populated via JS -->
+          </div>
+
+          <!-- Empty State (Shown when search has 0 matches) -->
+          <div id="snippetEmptyState" class="hidden flex-1 flex flex-col items-center justify-center p-6 text-center text-zinc-500">
+            <svg class="w-10 h-10 text-zinc-600 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+            <p class="text-xs font-medium text-zinc-300">No matching algorithms found</p>
+            <p class="text-[11px] text-zinc-500 mt-1 max-w-[220px]">Try adjusting your search keywords or switch category filter above.</p>
+            <button id="resetSearchFilterBtn" type="button" class="mt-3 text-xs text-[#c89f6e] hover:underline font-mono">Reset filters</button>
+          </div>
+        </div>
+
+        <!-- Right Column: Code Preview & Loading Interface -->
+        <div id="snippetsRightCol" class="w-full md:w-[58%] lg:w-[62%] hidden md:flex flex-col min-h-0 bg-[#050608] relative">
+          <!-- Preview Header -->
+          <div class="h-12 sm:h-14 px-3 sm:px-6 flex items-center justify-between border-b border-white/[0.06] bg-white/[0.015] flex-shrink-0 w-full overflow-hidden">
+            <div class="min-w-0 pr-2 flex-1">
+              <div class="flex items-center gap-1.5 sm:gap-2">
+                <h3 id="previewTitle" class="text-xs sm:text-sm font-semibold text-zinc-100 truncate">Algorithm Title</h3>
+                <span id="previewCategoryBadge" class="hidden sm:inline-block text-[10px] px-2 py-0.5 rounded bg-white/[0.04] text-zinc-400 border border-white/[0.06] flex-shrink-0">Category</span>
+              </div>
+              <div class="flex items-center gap-2 sm:gap-3 text-[10px] sm:text-[11px] text-zinc-500 font-mono mt-0.5">
+                <span id="previewComplexityTime">Time: O(n)</span>
+                <span>•</span>
+                <span id="previewComplexitySpace">Space: O(1)</span>
+              </div>
+            </div>
+
+            <!-- Action Buttons: Copy & Load into Editor -->
+            <div class="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
+              <button id="copySnippetBtn" type="button" class="ghost-control h-7 sm:h-8 px-2 sm:px-3 rounded-lg text-xs font-light text-zinc-300 hover:text-white flex items-center gap-1 sm:gap-1.5 transition-all">
+                <svg id="copySnippetIcon" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span id="copySnippetBtnText" class="hidden xs:inline">Copy Code</span>
+                <span class="xs:hidden">Copy</span>
+              </button>
+
+              <button id="loadSnippetBtn" type="button" class="h-7 sm:h-8 px-2.5 sm:px-3.5 rounded-lg apple-glass-run-btn text-[#070709] font-medium text-xs tracking-wider flex items-center gap-1 sm:gap-1.5 active:scale-[0.98] transition-all">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+                <span class="hidden xs:inline">Load into Editor</span>
+                <span class="xs:hidden">Load</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Code Preview Display Pane -->
+          <div class="flex-1 min-h-0 relative flex flex-col overflow-hidden">
+            <div id="snippetPreviewCodeContainer" class="flex-1 w-full h-full min-h-0 relative overflow-hidden"></div>
+          </div>
+
+          <!-- Bottom Tags Strip (Clean & Non-bulky) -->
+          <div class="h-9 px-4 sm:px-6 border-t border-white/[0.06] bg-white/[0.015] flex items-center justify-between flex-shrink-0">
+            <div id="previewTagsList" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar"></div>
+            <span class="text-[10px] font-mono text-zinc-500">Python 3</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Sleek Overwrite Confirmation Modal -->
+  <div id="overwriteModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300 select-none">
+    <div id="overwriteModalCard" class="w-full max-w-md rounded-2xl emerge-surface border border-[#c89f6e]/30 p-5 sm:p-6 shadow-[0_20px_60px_rgba(0,0,0,0.85),0_0_30px_rgba(200,159,110,0.15)] scale-95 transition-transform duration-300">
+      <div class="flex items-start gap-3.5">
+        <div class="w-10 h-10 rounded-xl bg-[#c89f6e]/15 border border-[#c89f6e]/30 flex items-center justify-center flex-shrink-0 text-[#c89f6e]">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+        </div>
+        <div class="flex-1">
+          <h3 class="text-base font-semibold text-zinc-100">Replace Editor Content?</h3>
+          <p id="overwriteModalText" class="text-xs text-zinc-400 mt-1.5 leading-relaxed">
+            Your editor currently contains active code. Loading this library item will overwrite your current workspace canvas.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-6 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-end gap-2">
+        <button id="overwriteCancelBtn" type="button" class="ghost-control h-8 px-3.5 rounded-lg text-xs font-sans text-zinc-300 hover:text-white">Keep My Code</button>
+        <button id="overwriteAppendBtn" type="button" class="ghost-control h-8 px-3.5 rounded-lg text-xs font-sans text-[#c89f6e] border-[#c89f6e]/30 hover:bg-[#c89f6e]/10">Append to Bottom</button>
+        <button id="overwriteConfirmBtn" type="button" class="h-8 px-4 rounded-lg bg-[#c89f6e] hover:bg-[#d6b081] text-[#070709] font-semibold text-xs transition-colors">Replace & Load</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* Prevent benign ResizeObserver loop errors */
+    window.addEventListener('error', function(event) {
+      if (event.message && (event.message.includes('ResizeObserver') || event.message.includes('undelivered notifications'))) {
+        event.stopImmediatePropagation();
+        event.preventDefault();
+        return false;
+      }
+    });
+
+    /* State Management */
+    let editor = null;
+    let isExecuting = false;
+    let activeInputResolve = null;
+    let activeInlineInput = null;
+    let activePage = 'editor'; // 'editor' | 'terminal'
+    let toastTimeout = null;
+    let currentOutputLine = null;
+    let refreshScheduled = false;
+
+    /* DOM Elements */
+    const runBtn = document.getElementById('runBtn');
+    const runBtnText = document.getElementById('runBtnText');
+    const runSpinner = document.getElementById('runSpinner');
+    const runPlayIcon = document.getElementById('runPlayIcon');
+    const engineStatusBadge = document.getElementById('engineStatusBadge');
+    const engineStatusDot = document.getElementById('engineStatusDot');
+    const engineStatusText = document.getElementById('engineStatusText');
+    const consoleContainer = document.getElementById('consoleContainer');
+    const emptyOutputPlaceholder = document.getElementById('emptyOutputPlaceholder');
+    const clearEditorBtn = document.getElementById('clearEditorBtn');
+    const clearConsoleBtn = document.getElementById('clearConsoleBtn');
+    const backToEditorBtn = document.getElementById('backToEditorBtn');
+    const editorPage = document.getElementById('editorPage');
+    const outputPage = document.getElementById('outputPage');
+    const cursorPosition = document.getElementById('cursorPosition');
+    const codeLength = document.getElementById('codeLength');
+    const execStatsBadge = document.getElementById('execStatsBadge');
+    const toast = document.getElementById('toast');
+    const codeEditorContainer = document.getElementById('codeEditorContainer');
+
+    /* Legal & Policy Modal Elements */
+    const legalModal = document.getElementById('legalModal');
+    const legalModalCard = document.getElementById('legalModalCard');
+    const legalModalBody = document.getElementById('legalModalBody');
+    const closeLegalModalBtn = document.getElementById('closeLegalModalBtn');
+    const closeLegalModalFooterBtn = document.getElementById('closeLegalModalFooterBtn');
+    const tabBtnTerms = document.getElementById('tabBtnTerms');
+    const tabBtnPrivacy = document.getElementById('tabBtnPrivacy');
+    const tabBtnAbout = document.getElementById('tabBtnAbout');
+    const openTermsLink = document.getElementById('openTermsLink');
+    const openPrivacyLink = document.getElementById('openPrivacyLink');
+    const openAboutLink = document.getElementById('openAboutLink');
+
+    /* Code Snippets & Algorithm Library Elements */
+    const snippetsBtn = document.getElementById('snippetsBtn');
+    const snippetsModal = document.getElementById('snippetsModal');
+    const snippetsModalCard = document.getElementById('snippetsModalCard');
+    const closeSnippetsModalBtn = document.getElementById('closeSnippetsModalBtn');
+    const snippetSearchInput = document.getElementById('snippetSearchInput');
+    const clearSearchBtn = document.getElementById('clearSearchBtn');
+    const categoryChipsContainer = document.getElementById('categoryChipsContainer');
+    const snippetCardsList = document.getElementById('snippetCardsList');
+    const snippetEmptyState = document.getElementById('snippetEmptyState');
+    const resetSearchFilterBtn = document.getElementById('resetSearchFilterBtn');
+    const snippetsLeftCol = document.getElementById('snippetsLeftCol');
+    const snippetsRightCol = document.getElementById('snippetsRightCol');
+    const mobileTabBrowse = document.getElementById('mobileTabBrowse');
+    const mobileTabPreview = document.getElementById('mobileTabPreview');
+    const previewTitle = document.getElementById('previewTitle');
+    const previewCategoryBadge = document.getElementById('previewCategoryBadge');
+    const previewComplexityTime = document.getElementById('previewComplexityTime');
+    const previewComplexitySpace = document.getElementById('previewComplexitySpace');
+    const copySnippetBtn = document.getElementById('copySnippetBtn');
+    const copySnippetBtnText = document.getElementById('copySnippetBtnText');
+    const loadSnippetBtn = document.getElementById('loadSnippetBtn');
+    const snippetPreviewCodeContainer = document.getElementById('snippetPreviewCodeContainer');
+    const previewTagsList = document.getElementById('previewTagsList');
+
+    /* Overwrite Guard Elements */
+    const overwriteModal = document.getElementById('overwriteModal');
+    const overwriteModalCard = document.getElementById('overwriteModalCard');
+    const overwriteModalText = document.getElementById('overwriteModalText');
+    const overwriteCancelBtn = document.getElementById('overwriteCancelBtn');
+    const overwriteAppendBtn = document.getElementById('overwriteAppendBtn');
+    const overwriteConfirmBtn = document.getElementById('overwriteConfirmBtn');
+
+    /* Complete Reset of Execution and UI States (guarantees Run button never gets stuck in processing) */
+    function resetExecutionState(notifyInterrupted = false) {
+      if (activeInputResolve) {
+        const fn = activeInputResolve;
+        activeInputResolve = null;
+        try {
+          fn('');
+        } catch (e) {}
+      }
+      if (activeInlineInput) {
+        if (activeInlineInput.parentNode) {
+          activeInlineInput.remove();
+        }
+        activeInlineInput = null;
+      }
+
+      isExecuting = false;
+      runBtn.disabled = false;
+      runSpinner.classList.add('hidden');
+      runPlayIcon.classList.remove('hidden');
+      runBtnText.textContent = 'Run';
+
+      if (notifyInterrupted) {
+        appendConsoleLine('⏹ Execution stopped', 'system');
+      }
+    }
+
+    /* Editor Refresh Handler */
+    function requestEditorRefresh() {
+      if (!editor || refreshScheduled) return;
+      refreshScheduled = true;
+      requestAnimationFrame(() => {
+        refreshScheduled = false;
+        if (editor) {
+          editor.refresh();
+        }
+      });
+    }
+
+    /* Dynamic Island Notification */
+    function showToast(message, duration = 2200) {
+      if (toastTimeout) {
+        clearTimeout(toastTimeout);
+      }
+      toast.textContent = message;
+      toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+        toastTimeout = null;
+      }, duration);
+    }
+
+    /* Page Switcher: Switch between Code Editor Page and Terminal Screen */
+    function setPage(pageName) {
+      activePage = pageName;
+      if (pageName === 'terminal') {
+        editorPage.classList.add('hidden');
+        outputPage.classList.remove('hidden');
+      } else {
+        outputPage.classList.add('hidden');
+        editorPage.classList.remove('hidden');
+        // Instantly restore Run button out of loading state when returning to editor
+        resetExecutionState(isExecuting);
+        requestEditorRefresh();
+      }
+    }
+
+    if (backToEditorBtn) {
+      backToEditorBtn.addEventListener('click', () => setPage('editor'));
+    }
+
+    function initEditor() {
+      codeEditorContainer.innerHTML = '';
+
+      editor = CodeMirror(codeEditorContainer, {
+        value: '# Hello World in Python\nprint("Hello, World!")\n',
+        mode: { name: 'python', version: 3, singleLineStringErrors: false },
+        theme: 'zenDark',
+        lineNumbers: true,
+        styleActiveLine: true,
+        matchBrackets: true,
+        autoCloseBrackets: true,
+        tabSize: 4,
+        indentUnit: 4,
+        indentWithTabs: false,
+        lineWrapping: true,
+        autofocus: true,
+        extraKeys: {
+          "Tab": function(cm) {
+            if (cm.somethingSelected()) {
+              cm.indentSelection("add");
+            } else {
+              cm.replaceSelection("    ", "end", "+input");
+            }
+          },
+          "Cmd-Enter": function() {
+            if (!isExecuting) executePythonCode();
+          },
+          "Ctrl-Enter": function() {
+            if (!isExecuting) executePythonCode();
+          }
+        }
+      });
+
+      function updateEditorStats() {
+        if (!editor) return;
+        const cur = editor.getCursor();
+        cursorPosition.textContent = `Ln ${cur.line + 1}, Col ${cur.ch + 1}`;
+        const val = editor.getValue();
+        codeLength.textContent = `${val.length} chars`;
+      }
+
+      editor.on('cursorActivity', updateEditorStats);
+      editor.on('change', () => {
+        updateEditorStats();
+        try {
+          localStorage.setItem('etrivo_code_draft', editor.getValue());
+        } catch (e) {}
+      });
+
+      const defaultHelloWorld = '# Hello World in Python\nprint("Hello, World!")\n';
+      try {
+        const savedDraft = localStorage.getItem('etrivo_code_draft');
+        if (savedDraft && savedDraft.trim()) {
+          editor.setValue(savedDraft);
+        } else {
+          editor.setValue(defaultHelloWorld);
+        }
+      } catch (e) {
+        editor.setValue(defaultHelloWorld);
+      }
+
+      updateEditorStats();
+
+      editorPage.addEventListener('click', function(e) {
+        if (!editor) return;
+        if (!e.target.closest('.CodeMirror')) {
+          editor.focus();
+        }
+      });
+
+      requestEditorRefresh();
+    }
+
+    /* Skulpt Engine File Loader */
+    function builtinRead(file) {
+      if (typeof Sk === 'undefined' || Sk.builtinFiles === undefined || Sk.builtinFiles["files"][file] === undefined) {
+        throw "File not found: '" + file + "'";
+      }
+      return Sk.builtinFiles["files"][file];
+    }
+
+    /* Verify Python Engine Availability */
+    function checkPythonEngine() {
+      if (typeof Sk !== 'undefined') {
+        engineStatusDot.className = 'w-1.5 h-1.5 rounded-full bg-[#c89f6e] shadow-[0_0_8px_#c89f6e]';
+        engineStatusText.textContent = 'Python Ready';
+        runBtn.disabled = false;
+      } else {
+        engineStatusDot.className = 'w-1.5 h-1.5 rounded-full bg-[#9e7b52] status-dot-pulse';
+        engineStatusText.textContent = 'Calibrating engine...';
+        setTimeout(checkPythonEngine, 100);
+      }
+    }
+
+    consoleContainer.addEventListener('click', () => {
+      if (activeInlineInput && !window.getSelection().toString()) {
+        activeInlineInput.focus();
+      }
+    });
+
+    function clearConsole() {
+      currentOutputLine = null;
+      if (activeInlineInput) {
+        if (activeInlineInput.parentNode) {
+          activeInlineInput.remove();
+        }
+        activeInlineInput = null;
+      }
+      consoleContainer.innerHTML = '';
+      if (emptyOutputPlaceholder) {
+        emptyOutputPlaceholder.style.display = 'flex';
+        consoleContainer.appendChild(emptyOutputPlaceholder);
+      }
+      execStatsBadge.classList.add('hidden');
+    }
+
+    function appendConsoleLine(text, type = 'stdout') {
+      if (emptyOutputPlaceholder && emptyOutputPlaceholder.parentNode) {
+        emptyOutputPlaceholder.style.display = 'none';
+      }
+
+      if (type !== 'stdout') {
+        currentOutputLine = null;
+        const line = document.createElement('div');
+        line.className = 'break-all whitespace-pre-wrap leading-relaxed font-mono';
+
+        if (type === 'stderr' || type === 'error') {
+          line.className += ' text-[#d97c72] bg-[#3a1515]/30 px-3 py-1.5 rounded-lg border-l-2 border-[#d97c72] text-xs my-1 backdrop-blur-sm';
+        } else if (type === 'stdin') {
+          line.className += ' text-[#c89f6e] font-medium opacity-90';
+        } else if (type === 'system') {
+          line.className += ' text-zinc-500 text-xs italic tracking-wider pb-1 mb-2 border-b border-white/[0.04]';
+        }
+
+        line.textContent = text;
+        consoleContainer.appendChild(line);
+        consoleContainer.scrollTop = consoleContainer.scrollHeight;
+        return;
+      }
+
+      const lines = text.split('\n');
+      for (let i = 0; i < lines.length; i++) {
+        const chunk = lines[i];
+        if (i === 0 && currentOutputLine && !currentOutputLine._ended) {
+          currentOutputLine.textContent += chunk;
+        } else if (chunk.length > 0 || i < lines.length - 1) {
+          const line = document.createElement('div');
+          line.className = 'break-all whitespace-pre-wrap leading-relaxed font-mono text-zinc-200';
+          line.textContent = chunk;
+          consoleContainer.appendChild(line);
+          currentOutputLine = line;
+        }
+        if (i < lines.length - 1 && currentOutputLine) {
+          currentOutputLine._ended = true;
+        }
+      }
+      consoleContainer.scrollTop = consoleContainer.scrollHeight;
+    }
+
+    async function executePythonCode() {
+      if (isExecuting) return;
+
+      if (typeof Sk === 'undefined') {
+        showToast('Engine preparing...');
+        return;
+      }
+
+      const code = editor ? editor.getValue() : '';
+      if (!code.trim()) {
+        showToast('Editor is vacant. Enter Python code to run.');
+        return;
+      }
+
+      // Automatically move to the terminal page when Run is tapped
+      setPage('terminal');
+
+      isExecuting = true;
+      runBtn.disabled = true;
+      runPlayIcon.classList.add('hidden');
+      runSpinner.classList.remove('hidden');
+      runBtnText.textContent = 'Running';
+
+      clearConsole();
+      appendConsoleLine('▶ Execution commenced', 'system');
+
+      const startTime = performance.now();
+
+      Sk.configure({
+        output: function(text) {
+          appendConsoleLine(text, 'stdout');
+        },
+        read: builtinRead,
+        inputfun: function(prompt) {
+          return new Promise(function(resolve) {
+            if (emptyOutputPlaceholder && emptyOutputPlaceholder.parentNode) {
+              emptyOutputPlaceholder.style.display = 'none';
+            }
+
+            const inputRow = document.createElement('div');
+            inputRow.className = 'break-all whitespace-pre-wrap leading-relaxed font-mono flex items-center flex-wrap gap-x-1.5';
+
+            if (prompt) {
+              const promptSpan = document.createElement('span');
+              promptSpan.className = 'text-[#c89f6e] font-medium';
+              promptSpan.textContent = prompt;
+              inputRow.appendChild(promptSpan);
+            }
+
+            const inlineInput = document.createElement('input');
+            inlineInput.type = 'text';
+            inlineInput.autocomplete = 'off';
+            inlineInput.autocapitalize = 'off';
+            inlineInput.spellcheck = false;
+            inlineInput.className = 'flex-1 min-w-[80px] bg-transparent border-0 outline-none p-0 m-0 font-mono text-[13px] sm:text-[14px] text-zinc-100 caret-[#c89f6e] focus:ring-0 shadow-none';
+
+            inputRow.appendChild(inlineInput);
+            consoleContainer.appendChild(inputRow);
+            consoleContainer.scrollTop = consoleContainer.scrollHeight;
+
+            activeInlineInput = inlineInput;
+
+            activeInputResolve = function(val) {
+              activeInlineInput = null;
+              if (inlineInput.parentNode) {
+                inlineInput.remove();
+              }
+              const enteredSpan = document.createElement('span');
+              enteredSpan.className = 'text-zinc-100 font-normal';
+              enteredSpan.textContent = val;
+              inputRow.appendChild(enteredSpan);
+              currentOutputLine = null;
+              resolve(val);
+            };
+
+            inlineInput.addEventListener('keydown', function(e) {
+              if (e.key === 'Enter') {
+                e.preventDefault();
+                e.stopPropagation();
+                if (e.repeat || e.isComposing) return;
+                const submittedVal = inlineInput.value;
+                const resolver = activeInputResolve;
+                if (resolver) {
+                  activeInputResolve = null;
+                  resolver(submittedVal);
+                }
+              }
+            });
+
+            setTimeout(() => {
+              inlineInput.focus();
+            }, 50);
+          });
+        },
+        inputfunTakesPrompt: true,
+        __future__: Sk.python3
+      });
+
+      try {
+        const executionPromise = Sk.misceval.asyncToPromise(function() {
+          return Sk.importMainWithBody("<stdin>", false, code, true);
+        });
+
+        await executionPromise;
+
+        const duration = Math.round(performance.now() - startTime);
+        execStatsBadge.textContent = `${duration}ms`;
+        execStatsBadge.classList.remove('hidden', 'text-[#d97c72]');
+        execStatsBadge.classList.add('text-[#c89f6e]');
+      } catch (err) {
+        const duration = Math.round(performance.now() - startTime);
+        execStatsBadge.textContent = `${duration}ms (interrupted)`;
+        execStatsBadge.classList.remove('hidden', 'text-[#c89f6e]');
+        execStatsBadge.classList.add('text-[#d97c72]');
+
+        let errorMsg = err.toString();
+        appendConsoleLine(errorMsg, 'error');
+      } finally {
+        resetExecutionState(false);
+      }
+    }
+
+    runBtn.addEventListener('click', executePythonCode);
+
+    clearEditorBtn.addEventListener('click', () => {
+      if (activePage === 'editor') {
+        if (editor) {
+          editor.setValue('');
+          try {
+            localStorage.removeItem('etrivo_code_draft');
+          } catch (e) {}
+          editor.focus();
+          resetExecutionState(false);
+          showToast('Canvas cleared');
+        }
+      } else {
+        clearConsole();
+        showToast('Console cleared');
+      }
+    });
+
+    clearConsoleBtn.addEventListener('click', () => {
+      clearConsole();
+      showToast('Console cleared');
+    });
+
+    const copyConsoleBtn = document.getElementById('copyConsoleBtn');
+    if (copyConsoleBtn) {
+      copyConsoleBtn.addEventListener('click', () => {
+        if (emptyOutputPlaceholder && emptyOutputPlaceholder.style.display !== 'none') {
+          showToast('No output to copy');
+          return;
+        }
+        const text = consoleContainer.innerText || consoleContainer.textContent || '';
+        if (text.trim()) {
+          navigator.clipboard.writeText(text).then(() => {
+            showToast('Console output copied');
+          }).catch(() => {
+            showToast('Output copied to clipboard');
+          });
+        } else {
+          showToast('No output to copy');
+        }
+      });
+    }
+
+    /* Legal Documentation and Modal Management */
+    const legalContents = {
+      terms: `
+        <div class="space-y-4">
+          <div class="border-b border-white/[0.06] pb-3">
+            <h2 class="text-base sm:text-lg font-semibold text-zinc-100 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#c89f6e]"></span>
+              Terms and Conditions
+            </h2>
+            <p class="text-xs text-zinc-400 mt-1">Effective: October 2026 • Governing ETRIVO Python Studio & Online Compiler</p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">1. Acceptance of Terms</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">By accessing, browsing, or running code within ETRIVO Online Python Compiler and Studio (&quot;ETRIVO&quot;, &quot;the Service&quot;), you acknowledge that you have read, understood, and agreed to be bound by these Terms and Conditions. This is an unmanaged, client-side developer utility provided free of charge.</p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">2. 100% User Code Ownership & Intellectual Property</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">You retain exclusive and complete copyright, patent, trademark, and intellectual property ownership over all source code, algorithms, data, inputs, and outputs you create or execute in ETRIVO. ETRIVO asserts zero ownership, licensing, commercial, or intellectual property claims over any user code.</p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">3. Permitted & Acceptable Use Policy</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">The Service is designed for educational, testing, algorithmic learning, software development, and non-commercial coding experimentation. You agree not to use the platform to: (a) generate or test malware, viruses, trojans, or ransomware; (b) execute cryptomining scripts or resource-exhaustion loops; (c) attempt client-side browser sandbox breakouts or security vulnerabilities; or (d) violate any applicable local, national, or international laws.</p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">4. Standard PSF & Open-Source Warranty Disclaimer</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed uppercase tracking-wider font-mono text-[11px] text-zinc-300 bg-white/[0.02] p-3 rounded-lg border border-white/[0.05]">The service and execution runtime are provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY OF CODE EXECUTION, OR FREEDOM FROM PROGRAMMING DEFECTS. The entire risk as to the quality and performance of your code remains with you.</p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">5. Limitation of Liability</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">To the maximum extent permitted by applicable law, in no event shall ETRIVO, its creators, open-source contributors, or the Python Software Foundation (PSF) be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including loss of code, data corruption, profit loss, or business interruption) arising in any way out of the use of or inability to use this platform.</p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">6. Autonomous Self-Service Platform</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">ETRIVO operates as an automated, self-service online tool. The platform is provided without live customer support, dedicated ticketing, or personal administration. Users are responsible for maintaining backups of their own source code.</p>
+          </div>
+        </div>
+      `,
+      privacy: `
+        <div class="space-y-4">
+          <div class="border-b border-white/[0.06] pb-3">
+            <h2 class="text-base sm:text-lg font-semibold text-zinc-100 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#c89f6e]"></span>
+              Privacy Policy
+            </h2>
+            <p class="text-xs text-zinc-400 mt-1">Effective: October 2026 • 100% Client-Side Privacy Architecture</p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">1. Zero-Server Code Storage & In-Browser Execution</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">Privacy is the foundational architectural pillar of ETRIVO. Unlike traditional cloud compilers that upload and evaluate your Python code on remote server clusters, ETRIVO compiles and runs your code entirely in your local browser runtime via client-side JavaScript (Skulpt). <strong class="text-zinc-200">Your source code, inputs, and console outputs are never transmitted, inspected, logged, or stored on any remote server.</strong></p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">2. Zero Account & Zero Personal Data Collection</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">ETRIVO requires no user account, registration, login credentials, email addresses, phone numbers, or passwords. We do not collect, profile, sell, monetize, or broker any personally identifiable information (PII) or user telemetry.</p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">3. Local Device Storage (Auto-Save)</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">To protect your ongoing work against accidental page refreshes or tab closures, ETRIVO uses your browser&apos;s isolated <code class="text-[#c89f6e] font-mono text-[11px]">localStorage</code> to save your editor draft locally on your physical machine. This data never leaves your device. You can purge this draft at any time by clicking the &quot;Clear&quot; button in the studio or clearing your browser site data.</p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">4. Zero Advertising Cookies & Behavioral Trackers</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">ETRIVO does not use advertising cookies, marketing pixels, cross-site trackers, or surveillance telemetry. Your programming sessions remain private, isolated, and unmonitored.</p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">5. Static Content Delivery Networks (CDNs)</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">Frontend assets (CodeMirror, Tailwind CSS, Skulpt, Google Fonts) are loaded over HTTPS from public, reputable CDN providers. These providers handle standard anonymous HTTP network transport in accordance with standard global internet protocols.</p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">6. Self-Managed Privacy</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">Because ETRIVO collects zero personal data and stores zero server logs, there are no databases or user profiles to request deletion for. You hold complete, sovereign custody over your environment directly in your own browser.</p>
+          </div>
+        </div>
+      `,
+      about: `
+        <div class="space-y-4">
+          <div class="border-b border-white/[0.06] pb-3">
+            <h2 class="text-base sm:text-lg font-semibold text-zinc-100 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#c89f6e]"></span>
+              PSF Trademark & Legal Disclaimer
+            </h2>
+            <p class="text-xs text-zinc-400 mt-1">Official Compliance with Python Software Foundation (PSF) Guidelines</p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">1. Python® Trademark Notice</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed"><strong class="text-zinc-200">Python®</strong> and the Python logos are trademarks or registered trademarks of the <strong class="text-zinc-200">Python Software Foundation (PSF)</strong>, registered in the United States and other countries. ETRIVO is an independent software application and is <strong class="text-zinc-200">not affiliated with, endorsed by, sponsored by, or operated by the Python Software Foundation</strong>.</p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">2. In-Browser Python 3 Runtime Disclaimer</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">ETRIVO implements an in-browser Python 3 execution sandbox powered by the open-source Skulpt runtime engine. It is an independent client-side implementation of the Python language and is not the official CPython reference distribution maintained by the PSF. Some advanced C-extensions, networking sockets, platform-specific POSIX calls, and third-party PyPI wheels that require binary compilation are not supported.</p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">3. Open-Source Licenses & Attributions</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-2">ETRIVO gratefully acknowledges and complies with the licenses of the foundational open-source projects powering this studio:</p>
+            <ul class="list-disc list-inside space-y-1 text-xs text-zinc-400 pl-1">
+              <li><strong class="text-zinc-300">Python Language & Standard Library Concepts:</strong> Subject to the Python Software Foundation License (PSFL).</li>
+              <li><strong class="text-zinc-300">Skulpt:</strong> In-browser Python runtime, licensed under the MIT License and Python Software Foundation License.</li>
+              <li><strong class="text-zinc-300">CodeMirror:</strong> Code editor component, licensed under the MIT License.</li>
+              <li><strong class="text-zinc-300">Tailwind CSS:</strong> Styling utility framework, licensed under the MIT License.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">4. Authentic Python IDLE Terminal Compatibility</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">ETRIVO is engineered to faithfully replicate the stream-based interactive shell of native Python IDLE. Standard input requests (<code class="text-[#c89f6e] font-mono text-[11px]">input()</code>) execute inline directly within the console text flow, eliminating unauthentic separate input boxes or modal windows.</p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1">5. Educational & Development Purpose</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">This online compiler is provided for instructional, educational, programming coursework, and algorithm testing purposes. It should not be utilized as a safety-critical execution environment.</p>
+          </div>
+        </div>
+      `
+    };
+
+    function setLegalTab(tabKey) {
+      const tabs = [
+        { key: 'terms', btn: tabBtnTerms },
+        { key: 'privacy', btn: tabBtnPrivacy },
+        { key: 'about', btn: tabBtnAbout }
+      ];
+
+      tabs.forEach(t => {
+        if (t.btn) {
+          if (t.key === tabKey) {
+            t.btn.className = 'px-3 py-1.5 rounded-lg text-xs font-medium tracking-wide transition-all duration-300 text-[#c89f6e] bg-white/[0.07] border border-white/[0.1]';
+          } else {
+            t.btn.className = 'px-3 py-1.5 rounded-lg text-xs font-medium tracking-wide transition-all duration-300 text-zinc-400 hover:text-white hover:bg-white/[0.03] border border-transparent';
+          }
+        }
+      });
+
+      if (legalModalBody) {
+        legalModalBody.innerHTML = legalContents[tabKey] || legalContents.terms;
+      }
+    }
+
+    function openLegalModal(tabKey = 'terms') {
+      setLegalTab(tabKey);
+      if (legalModal && legalModalCard) {
+        legalModal.classList.remove('opacity-0', 'pointer-events-none');
+        legalModal.classList.add('opacity-100');
+        legalModalCard.classList.remove('scale-95');
+        legalModalCard.classList.add('scale-100');
+      }
+    }
+
+    function closeLegalModal() {
+      if (legalModal && legalModalCard) {
+        legalModal.classList.remove('opacity-100');
+        legalModal.classList.add('opacity-0', 'pointer-events-none');
+        legalModalCard.classList.remove('scale-100');
+        legalModalCard.classList.add('scale-95');
+      }
+    }
+
+    if (openTermsLink) openTermsLink.addEventListener('click', () => openLegalModal('terms'));
+    if (openPrivacyLink) openPrivacyLink.addEventListener('click', () => openLegalModal('privacy'));
+    if (openAboutLink) openAboutLink.addEventListener('click', () => openLegalModal('about'));
+
+    const openTermsLinkTerminal = document.getElementById('openTermsLinkTerminal');
+    const openPrivacyLinkTerminal = document.getElementById('openPrivacyLinkTerminal');
+    const openAboutLinkTerminal = document.getElementById('openAboutLinkTerminal');
+
+    if (openTermsLinkTerminal) openTermsLinkTerminal.addEventListener('click', () => openLegalModal('terms'));
+    if (openPrivacyLinkTerminal) openPrivacyLinkTerminal.addEventListener('click', () => openLegalModal('privacy'));
+    if (openAboutLinkTerminal) openAboutLinkTerminal.addEventListener('click', () => openLegalModal('about'));
+
+    if (tabBtnTerms) tabBtnTerms.addEventListener('click', () => setLegalTab('terms'));
+    if (tabBtnPrivacy) tabBtnPrivacy.addEventListener('click', () => setLegalTab('privacy'));
+    if (tabBtnAbout) tabBtnAbout.addEventListener('click', () => setLegalTab('about'));
+
+    if (closeLegalModalBtn) closeLegalModalBtn.addEventListener('click', closeLegalModal);
+    if (closeLegalModalFooterBtn) closeLegalModalFooterBtn.addEventListener('click', closeLegalModal);
+
+    if (legalModal) {
+      legalModal.addEventListener('click', (e) => {
+        if (e.target === legalModal) closeLegalModal();
+      });
+    }
+
+
+    /* ========================================================
+     * Code Snippets & Algorithm Library Module
+     * ======================================================== */
+    let allSnippets = [];
+    let filteredSnippets = [];
+    let selectedSnippet = null;
+    let activeCategory = 'all';
+    let searchQuery = '';
+    let previewEditorInstance = null;
+    let pendingLoadSnippet = null;
+
+    // Embedded Fallback Database (Guarantees zero-lag performance on offline & file:/// execution)
+    const EMBEDDED_SNIPPETS = [{"id":"01-hello-world","title":"01. Print Statements & Output","category":"Getting Started","tags":["Print","Output"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"print(\"Hello, World!\")\nprint(\"Welcome to Python Programming\")\nprint(\"Python is simple and powerful\")"},{"id":"02-input-name","title":"02. User Input with input()","category":"Getting Started","tags":["Input","Strings"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"name = input(\"Enter your name: \")\nage = int(input(\"Enter your age: \"))\nprint(\"Hello\", name, \"you are\", age, \"years old\")"},{"id":"03-add-two-numbers","title":"03. Add Two Numbers with int(input())","category":"Getting Started","tags":["Input","Arithmetic"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"num1 = int(input(\"Enter first number: \"))\nnum2 = int(input(\"Enter second number: \"))\ntotal = num1 + num2\nprint(\"Sum =\", total)"},{"id":"04-arithmetic-operators","title":"04. All Arithmetic Operators","category":"Getting Started","tags":["Operators","Math"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nprint(\"Addition:\", a + b)\nprint(\"Subtraction:\", a - b)\nprint(\"Multiplication:\", a * b)\nprint(\"Division:\", a / b)\nprint(\"Floor Division:\", a // b)\nprint(\"Modulus:\", a % b)\nprint(\"Exponentiation:\", a ** b)"},{"id":"05-simple-interest","title":"05. Calculate Simple Interest","category":"Getting Started","tags":["Math","Formulas"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"p = float(input(\"Enter Principal amount: \"))\nr = float(input(\"Enter Rate of interest: \"))\nt = float(input(\"Enter Time period (years): \"))\nsi = (p * r * t) / 100\namount = p + si\nprint(\"Simple Interest =\", si)\nprint(\"Total Amount =\", amount)"},{"id":"06-compound-interest","title":"06. Calculate Compound Interest","category":"Getting Started","tags":["Math","Finance"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"p = float(input(\"Enter Principal amount: \"))\nr = float(input(\"Enter Annual Interest Rate (%): \"))\nt = float(input(\"Enter Time period (years): \"))\namount = p * ((1 + r / 100) ** t)\nci = amount - p\nprint(\"Compound Interest =\", round(ci, 2))\nprint(\"Total Accumulated Amount =\", round(amount, 2))"},{"id":"07-area-perimeter-circle","title":"07. Area & Circumference of Circle","category":"Getting Started","tags":["Geometry","Math"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"radius = float(input(\"Enter radius of circle: \"))\npi = 3.14159\narea = pi * radius * radius\ncircumference = 2 * pi * radius\nprint(\"Area =\", area)\nprint(\"Circumference =\", circumference)"},{"id":"08-herons-formula","title":"08. Triangle Area by Heron's Formula","category":"Getting Started","tags":["Geometry","Math"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"import math\n\na = float(input(\"Enter first side (a): \"))\nb = float(input(\"Enter second side (b): \"))\nc = float(input(\"Enter third side (c): \"))\n\ns = (a + b + c) / 2\narea = math.sqrt(s * (s - a) * (s - b) * (s - c))\nprint(\"Semi-perimeter (s) =\", s)\nprint(\"Area of Triangle by Heron's Formula =\", round(area, 4))"},{"id":"09-swap-two-numbers","title":"09. Swap Two Numbers (Pythonic)","category":"Getting Started","tags":["Variables","Swap"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"a = int(input(\"Enter first number (a): \"))\nb = int(input(\"Enter second number (b): \"))\nprint(\"Before swapping: a =\", a, \"b =\", b)\na, b = b, a\nprint(\"After swapping: a =\", a, \"b =\", b)"},{"id":"10-swap-with-temp","title":"10. Swap Using Third Variable","category":"Getting Started","tags":["Variables","Logic"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"a = int(input(\"Enter first number (a): \"))\nb = int(input(\"Enter second number (b): \"))\nprint(\"Before swapping: a =\", a, \"b =\", b)\ntemp = a\na = b\nb = temp\nprint(\"After swapping: a =\", a, \"b =\", b)"},{"id":"11-celsius-to-fahrenheit","title":"11. Temperature Converter (C to F)","category":"Getting Started","tags":["Conversion","Math"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"celsius = float(input(\"Enter temperature in Celsius: \"))\nfahrenheit = (celsius * 9 / 5) + 32\nprint(\"Temperature in Fahrenheit:\", fahrenheit)"},{"id":"12-even-or-odd","title":"12. Check Even or Odd","category":"Decision Making","tags":["Conditionals","Math"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"num = int(input(\"Enter an integer: \"))\nif num % 2 == 0:\n    print(num, \"is Even\")\nelse:\n    print(num, \"is Odd\")"},{"id":"13-positive-negative-zero","title":"13. Positive, Negative, or Zero","category":"Decision Making","tags":["Conditionals","Logic"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"The number is Positive\")\nelif num < 0:\n    print(\"The number is Negative\")\nelse:\n    print(\"The number is Zero\")"},{"id":"14-largest-two-numbers","title":"14. Largest of Two Numbers","category":"Decision Making","tags":["Conditionals","Comparison"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nif a > b:\n    print(\"Largest number is:\", a)\nelif b > a:\n    print(\"Largest number is:\", b)\nelse:\n    print(\"Both numbers are equal\")"},{"id":"15-largest-three-numbers","title":"15. Largest of Three Numbers","category":"Decision Making","tags":["Conditionals","Comparison"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nc = int(input(\"Enter third number: \"))\nif a >= b and a >= c:\n    largest = a\nelif b >= a and b >= c:\n    largest = b\nelse:\n    largest = c\nprint(\"The largest number is:\", largest)"},{"id":"16-descending-order-three","title":"16. Arrange 3 Numbers in Descending Order","category":"Decision Making","tags":["Conditionals","Sorting"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nc = int(input(\"Enter third number: \"))\n\nif a >= b and a >= c:\n    if b >= c:\n        print(\"Descending order:\", a, b, c)\n    else:\n        print(\"Descending order:\", a, c, b)\nelif b >= a and b >= c:\n    if a >= c:\n        print(\"Descending order:\", b, a, c)\n    else:\n        print(\"Descending order:\", b, c, a)\nelse:\n    if a >= b:\n        print(\"Descending order:\", c, a, b)\n    else:\n        print(\"Descending order:\", c, b, a)"},{"id":"17-ascending-order-three","title":"17. Arrange 3 Numbers in Ascending Order","category":"Decision Making","tags":["Conditionals","Sorting"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nc = int(input(\"Enter third number: \"))\n\nif a <= b and a <= c:\n    if b <= c:\n        print(\"Ascending order:\", a, b, c)\n    else:\n        print(\"Ascending order:\", a, c, b)\nelif b <= a and b <= c:\n    if a <= c:\n        print(\"Ascending order:\", b, a, c)\n    else:\n        print(\"Ascending order:\", b, c, a)\nelse:\n    if a <= b:\n        print(\"Ascending order:\", c, a, b)\n    else:\n        print(\"Ascending order:\", c, b, a)"},{"id":"18-leap-year","title":"18. Leap Year Checker","category":"Decision Making","tags":["Conditionals","Logic"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"year = int(input(\"Enter a year: \"))\nif (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):\n    print(year, \"is a Leap Year\")\nelse:\n    print(year, \"is not a Leap Year\")"},{"id":"19-vowel-or-consonant","title":"19. Check Vowel or Consonant","category":"Decision Making","tags":["Conditionals","Characters"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"ch = input(\"Enter a single letter: \").lower()\nif len(ch) == 1 and ch.isalpha():\n    if ch in \"aeiou\":\n        print(ch, \"is a Vowel\")\n    else:\n        print(ch, \"is a Consonant\")\nelse:\n    print(\"Invalid input! Please enter a single alphabetic letter.\")"},{"id":"20-menu-calculator","title":"20. Menu-Driven Calculator","category":"Decision Making","tags":["Menu Driven","Conditionals"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"print(\"--- CALCULATOR MENU ---\")\nprint(\"1. Addition (+)\")\nprint(\"2. Subtraction (-)\")\nprint(\"3. Multiplication (*)\")\nprint(\"4. Division (/)\")\n\nchoice = int(input(\"Enter your choice (1-4): \"))\nnum1 = float(input(\"Enter first number: \"))\nnum2 = float(input(\"Enter second number: \"))\n\nif choice == 1:\n    print(\"Result:\", num1 + num2)\nelif choice == 2:\n    print(\"Result:\", num1 - num2)\nelif choice == 3:\n    print(\"Result:\", num1 * num2)\nelif choice == 4:\n    if num2 != 0:\n        print(\"Result:\", num1 / num2)\n    else:\n        print(\"Error: Division by zero is not allowed\")\nelse:\n    print(\"Invalid choice selected\")"},{"id":"21-menu-area-shapes","title":"21. Menu-Driven Area of Shapes","category":"Decision Making","tags":["Menu Driven","Geometry"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"print(\"--- AREA OF SHAPES MENU ---\")\nprint(\"1. Area of Circle\")\nprint(\"2. Area of Rectangle\")\nprint(\"3. Area of Triangle\")\n\nchoice = int(input(\"Enter your choice (1-3): \"))\n\nif choice == 1:\n    r = float(input(\"Enter radius: \"))\n    area = 3.14159 * r * r\n    print(\"Area of Circle =\", area)\nelif choice == 2:\n    length = float(input(\"Enter length: \"))\n    breadth = float(input(\"Enter breadth: \"))\n    area = length * breadth\n    print(\"Area of Rectangle =\", area)\nelif choice == 3:\n    base = float(input(\"Enter base: \"))\n    height = float(input(\"Enter height: \"))\n    area = 0.5 * base * height\n    print(\"Area of Triangle =\", area)\nelse:\n    print(\"Invalid choice selected\")"},{"id":"22-grade-calculator","title":"22. Student Marks & Grade System","category":"Decision Making","tags":["Conditionals","Evaluation"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"marks = float(input(\"Enter percentage marks (0-100): \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"E (Needs Improvement)\"\nprint(\"Calculated Grade:\", grade)"},{"id":"23-triangle-type","title":"23. Triangle Validity & Type","category":"Decision Making","tags":["Conditionals","Geometry"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"s1 = float(input(\"Enter first side: \"))\ns2 = float(input(\"Enter second side: \"))\ns3 = float(input(\"Enter third side: \"))\n\nif s1 + s2 > s3 and s2 + s3 > s1 and s1 + s3 > s2:\n    if s1 == s2 == s3:\n        print(\"Equilateral Triangle\")\n    elif s1 == s2 or s2 == s3 or s1 == s3:\n        print(\"Isosceles Triangle\")\n    else:\n        print(\"Scalene Triangle\")\nelse:\n    print(\"These sides cannot form a valid triangle\")"},{"id":"24-quadratic-roots","title":"24. Roots of Quadratic Equation","category":"Decision Making","tags":["Math","Algebra"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"a = float(input(\"Enter coefficient a: \"))\nb = float(input(\"Enter coefficient b: \"))\nc = float(input(\"Enter coefficient c: \"))\n\nd = b ** 2 - 4 * a * c\n\nif d > 0:\n    root1 = (-b + d ** 0.5) / (2 * a)\n    root2 = (-b - d ** 0.5) / (2 * a)\n    print(\"Real and Distinct Roots:\", round(root1, 4), \"and\", round(root2, 4))\nelif d == 0:\n    root = -b / (2 * a)\n    print(\"Real and Equal Root:\", round(root, 4))\nelse:\n    real_part = -b / (2 * a)\n    imag_part = (abs(d) ** 0.5) / (2 * a)\n    print(\"Complex Roots:\", round(real_part, 4), \"+-\", round(imag_part, 4), \"i\")"},{"id":"25-print-1-to-n","title":"25. Print 1 to N using for Loop","category":"Iteration","tags":["for Loop","range"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"n = int(input(\"Enter value of n: \"))\nfor i in range(1, n + 1):\n    print(i, end=\" \")\nprint()"},{"id":"26-print-n-to-1","title":"26. Print N down to 1 using while Loop","category":"Iteration","tags":["while Loop","Counter"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"n = int(input(\"Enter value of n: \"))\nwhile n >= 1:\n    print(n, end=\" \")\n    n -= 1\nprint()"},{"id":"27-multiplication-table","title":"27. Multiplication Table of a Number","category":"Iteration","tags":["for Loop","Math"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"num = int(input(\"Enter a number for multiplication table: \"))\nfor i in range(1, 11):\n    print(num, \"x\", i, \"=\", num * i)"},{"id":"28-sum-natural-numbers","title":"28. Sum of First N Natural Numbers","category":"Iteration","tags":["Loops","Math"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"n = int(input(\"Enter a positive integer n: \"))\ntotal = 0\nfor i in range(1, n + 1):\n    total += i\nprint(\"Sum of first\", n, \"natural numbers =\", total)"},{"id":"29-factorial-loop","title":"29. Factorial using for Loop","category":"Iteration","tags":["Loops","Math"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"n = int(input(\"Enter a non-negative integer: \"))\nfact = 1\nfor i in range(1, n + 1):\n    fact *= i\nprint(\"Factorial of\", n, \"=\", fact)"},{"id":"30-reverse-number","title":"30. Reverse a Number using while Loop","category":"Iteration","tags":["while Loop","Digits"],"complexity":{"time":"O(log n)","space":"O(1)"},"code":"num = int(input(\"Enter an integer: \"))\noriginal = num\nrev = 0\nwhile num > 0:\n    digit = num % 10\n    rev = rev * 10 + digit\n    num = num // 10\nprint(\"Reversed number of\", original, \"=\", rev)"},{"id":"31-sum-of-digits","title":"31. Sum of Digits of an Integer","category":"Iteration","tags":["while Loop","Digits"],"complexity":{"time":"O(log n)","space":"O(1)"},"code":"num = int(input(\"Enter an integer: \"))\ntemp = num\ntotal = 0\nwhile temp > 0:\n    digit = temp % 10\n    total += digit\n    temp = temp // 10\nprint(\"Sum of digits of\", num, \"=\", total)"},{"id":"32-count-digits","title":"32. Count Number of Digits in Integer","category":"Iteration","tags":["while Loop","Digits"],"complexity":{"time":"O(log n)","space":"O(1)"},"code":"num = int(input(\"Enter an integer: \"))\ntemp = abs(num)\ncount = 0\nif temp == 0:\n    count = 1\nelse:\n    while temp > 0:\n        count += 1\n        temp = temp // 10\nprint(\"Total number of digits =\", count)"},{"id":"33-palindrome-number","title":"33. Palindrome Number Checker","category":"Iteration","tags":["while Loop","Logic"],"complexity":{"time":"O(log n)","space":"O(1)"},"code":"num = int(input(\"Enter an integer: \"))\ntemp = num\nrev = 0\nwhile temp > 0:\n    digit = temp % 10\n    rev = rev * 10 + digit\n    temp = temp // 10\nif num == rev:\n    print(num, \"is a Palindrome Number\")\nelse:\n    print(num, \"is not a Palindrome Number\")"},{"id":"34-armstrong-number","title":"34. Armstrong Number Checker","category":"Iteration","tags":["while Loop","Math"],"complexity":{"time":"O(log n)","space":"O(1)"},"code":"num = int(input(\"Enter an integer: \"))\ntemp = num\norder = len(str(num))\ntotal = 0\nwhile temp > 0:\n    digit = temp % 10\n    total += digit ** order\n    temp = temp // 10\nif num == total:\n    print(num, \"is an Armstrong Number\")\nelse:\n    print(num, \"is not an Armstrong Number\")"},{"id":"35-prime-number","title":"35. Prime Number Checker using Loop","category":"Iteration","tags":["Loops","Primes"],"complexity":{"time":"O(sqrt n)","space":"O(1)"},"code":"num = int(input(\"Enter an integer greater than 1: \"))\nis_prime = True\nif num <= 1:\n    is_prime = False\nelse:\n    for i in range(2, int(num ** 0.5) + 1):\n        if num % i == 0:\n            is_prime = False\n            break\nif is_prime:\n    print(num, \"is a Prime Number\")\nelse:\n    print(num, \"is not a Prime Number\")"},{"id":"36-primes-in-range","title":"36. Prime Numbers in a Given Range","category":"Iteration","tags":["Nested Loops","Primes"],"complexity":{"time":"O(n sqrt n)","space":"O(1)"},"code":"lower = int(input(\"Enter lower limit: \"))\nupper = int(input(\"Enter upper limit: \"))\nprint(\"Prime numbers between\", lower, \"and\", upper, \":\")\nfor num in range(lower, upper + 1):\n    if num > 1:\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                break\n        else:\n            print(num, end=\" \")\nprint()"},{"id":"37-fibonacci-series","title":"37. Fibonacci Series up to N Terms","category":"Iteration","tags":["while Loop","Series"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"n = int(input(\"Enter number of terms: \"))\na, b = 0, 1\ncount = 0\nprint(\"Fibonacci Series:\")\nwhile count < n:\n    print(a, end=\" \")\n    nth = a + b\n    a = b\n    b = nth\n    count += 1\nprint()"},{"id":"38-gcd-hcf","title":"38. Greatest Common Divisor (GCD/HCF)","category":"Iteration","tags":["Euclidean","Math"],"complexity":{"time":"O(log(min(a,b)))","space":"O(1)"},"code":"a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nx, y = a, b\nwhile y != 0:\n    x, y = y, x % y\nprint(\"GCD / HCF of\", a, \"and\", b, \"=\", x)"},{"id":"39-lcm-two-numbers","title":"39. Least Common Multiple (LCM)","category":"Iteration","tags":["while Loop","Math"],"complexity":{"time":"O(a*b)","space":"O(1)"},"code":"a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\ngreater = max(a, b)\nwhile True:\n    if greater % a == 0 and greater % b == 0:\n        lcm = greater\n        break\n    greater += 1\nprint(\"LCM of\", a, \"and\", b, \"=\", lcm)"},{"id":"40-sum-series-powers","title":"40. Sum of Series 1 + x + x^2 + ... + x^n","category":"Iteration","tags":["for Loop","Series"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"x = int(input(\"Enter base value (x): \"))\nn = int(input(\"Enter number of terms (n): \"))\ntotal = 0\nfor i in range(n + 1):\n    total += x ** i\nprint(\"Sum of series 1 + x + x^2 + ... + x^n =\", total)"},{"id":"41-sum-series-fraction","title":"41. Sum of Series 1 + 1/2 + 1/3 + ... + 1/n","category":"Iteration","tags":["for Loop","Series"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"n = int(input(\"Enter value of n: \"))\ntotal = 0.0\nfor i in range(1, n + 1):\n    total += 1.0 / i\nprint(\"Sum of series 1 + 1/2 + 1/3 + ... + 1/n =\", round(total, 4))"},{"id":"42-alternating-series","title":"42. Sum of Alternating Power Series","category":"Iteration","tags":["Series","Math"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"x = float(input(\"Enter value of x: \"))\nn = int(input(\"Enter number of terms (n): \"))\ntotal = 0.0\n\nfor i in range(1, n + 1):\n    term = ((x ** i) / i) * ((-1) ** (i + 1))\n    total += term\n\nprint(\"Sum of alternating series =\", round(total, 4))"},{"id":"43-break-continue","title":"43. Control Statements (break & continue)","category":"Iteration","tags":["break","continue"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"print(\"Demonstrating continue (skipping 3):\")\nfor i in range(1, 6):\n    if i == 3:\n        continue\n    print(i, end=\" \")\nprint()\n\nprint(\"Demonstrating break (stopping at 4):\")\nfor i in range(1, 10):\n    if i == 4:\n        break\n    print(i, end=\" \")\nprint()"},{"id":"44-star-right-triangle","title":"44. Right-Angled Star Triangle","category":"Patterns","tags":["Nested Loops","Stars"],"complexity":{"time":"O(n^2)","space":"O(1)"},"code":"n = int(input(\"Enter number of rows: \"))\nfor i in range(1, n + 1):\n    print(\"*\" * i)"},{"id":"45-inverted-star-triangle","title":"45. Inverted Star Triangle","category":"Patterns","tags":["Nested Loops","Stars"],"complexity":{"time":"O(n^2)","space":"O(1)"},"code":"n = int(input(\"Enter number of rows: \"))\nfor i in range(n, 0, -1):\n    print(\"*\" * i)"},{"id":"46-number-triangle","title":"46. Number Triangle Pattern","category":"Patterns","tags":["Nested Loops","Numbers"],"complexity":{"time":"O(n^2)","space":"O(1)"},"code":"n = int(input(\"Enter number of rows: \"))\nfor i in range(1, n + 1):\n    for j in range(1, i + 1):\n        print(j, end=\" \")\n    print()"},{"id":"47-floyds-triangle","title":"47. Floyd's Triangle Pattern","category":"Patterns","tags":["Nested Loops","Numbers"],"complexity":{"time":"O(n^2)","space":"O(1)"},"code":"n = int(input(\"Enter number of rows: \"))\nnum = 1\nfor i in range(1, n + 1):\n    for j in range(1, i + 1):\n        print(num, end=\" \")\n        num += 1\n    print()"},{"id":"48-star-pyramid","title":"48. Centered Star Pyramid","category":"Patterns","tags":["Nested Loops","Pyramid"],"complexity":{"time":"O(n^2)","space":"O(1)"},"code":"n = int(input(\"Enter number of rows: \"))\nfor i in range(1, n + 1):\n    spaces = \" \" * (n - i)\n    stars = \"*\" * (2 * i - 1)\n    print(spaces + stars)"},{"id":"49-string-traversal","title":"49. String Traversal & Inspection","category":"Strings","tags":["Strings","Methods"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"text = input(\"Enter a string: \")\nprint(\"Character analysis:\")\nfor char in text:\n    print(char, \"-> IsAlpha:\", char.isalpha(), \"| IsDigit:\", char.isdigit())"},{"id":"50-count-vowels-consonants","title":"50. Count Vowels, Consonants, Digits","category":"Strings","tags":["Strings","Counter"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"text = input(\"Enter a sentence: \")\nvowels = consonants = digits = spaces = 0\nvowel_set = \"aeiouAEIOU\"\n\nfor ch in text:\n    if ch in vowel_set:\n        vowels += 1\n    elif ch.isalpha():\n        consonants += 1\n    elif ch.isdigit():\n        digits += 1\n    elif ch.isspace():\n        spaces += 1\n\nprint(\"Vowels:\", vowels)\nprint(\"Consonants:\", consonants)\nprint(\"Digits:\", digits)\nprint(\"Spaces:\", spaces)"},{"id":"51-palindrome-string","title":"51. Palindrome String Checker","category":"Strings","tags":["Strings","Slicing"],"complexity":{"time":"O(n)","space":"O(n)"},"code":"s = input(\"Enter a word or string: \")\ncleaned = s.replace(\" \", \"\").lower()\nif cleaned == cleaned[::-1]:\n    print(\"'\", s, \"' is a Palindrome String\")\nelse:\n    print(\"'\", s, \"' is not a Palindrome String\")"},{"id":"52-reverse-string","title":"52. Reverse a String without Built-ins","category":"Strings","tags":["Strings","Loops"],"complexity":{"time":"O(n)","space":"O(n)"},"code":"s = input(\"Enter a string to reverse: \")\nreversed_str = \"\"\nfor char in s:\n    reversed_str = char + reversed_str\nprint(\"Reversed string:\", reversed_str)"},{"id":"53-title-case-words","title":"53. Capitalize First Letter of Each Word","category":"Strings","tags":["Strings","Lists"],"complexity":{"time":"O(n)","space":"O(n)"},"code":"sentence = input(\"Enter a sentence: \")\nwords = sentence.split()\ncapitalized_words = [w.capitalize() for w in words]\nresult = \" \".join(capitalized_words)\nprint(\"Capitalized result:\", result)"},{"id":"54-anagram-checker","title":"54. Check Anagram Strings","category":"Strings","tags":["Strings","Sorting"],"complexity":{"time":"O(n log n)","space":"O(n)"},"code":"str1 = input(\"Enter first string: \")\nstr2 = input(\"Enter second string: \")\n\nclean1 = sorted(str1.replace(\" \", \"\").lower())\nclean2 = sorted(str2.replace(\" \", \"\").lower())\n\nif clean1 == clean2:\n    print(\"The strings are Anagrams\")\nelse:\n    print(\"The strings are Not Anagrams\")"},{"id":"55-input-list-numbers","title":"55. Input a List of Numbers from User","category":"Lists & Tuples","tags":["Lists","Input"],"complexity":{"time":"O(n)","space":"O(n)"},"code":"n = int(input(\"How many elements do you want to enter? \"))\nnumbers = []\nfor i in range(n):\n    val = int(input(\"Enter element \" + str(i + 1) + \": \"))\n    numbers.append(val)\nprint(\"User created list:\", numbers)"},{"id":"56-max-min-in-list","title":"56. Find Maximum and Minimum in List","category":"Lists & Tuples","tags":["Lists","Traversal"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"numbers = [45, 12, 89, 23, 67, 91, 5, 34]\nprint(\"List:\", numbers)\nmaximum = numbers[0]\nminimum = numbers[0]\nfor num in numbers:\n    if num > maximum:\n        maximum = num\n    if num < minimum:\n        minimum = num\nprint(\"Maximum element =\", maximum)\nprint(\"Minimum element =\", minimum)"},{"id":"57-second-largest","title":"57. Find Second Largest Number in List","category":"Lists & Tuples","tags":["Lists","Logic"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"numbers = [14, 45, 82, 33, 91, 67, 54]\nprint(\"List of numbers:\", numbers)\n\nfirst = second = float(\"-inf\")\nfor num in numbers:\n    if num > first:\n        second = first\n        first = num\n    elif num > second and num != first:\n        second = num\n\nprint(\"Largest number =\", first)\nprint(\"Second largest number =\", second)"},{"id":"58-sum-avg-list","title":"58. Sum and Average of List Elements","category":"Lists & Tuples","tags":["Lists","Math"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"numbers = [10, 20, 30, 40, 50]\nprint(\"Numbers:\", numbers)\ntotal = sum(numbers)\naverage = total / len(numbers)\nprint(\"Sum =\", total)\nprint(\"Average =\", average)"},{"id":"59-linear-search","title":"59. Linear Search in a List","category":"Lists & Tuples","tags":["Search","Lists"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"items = [15, 42, 8, 23, 74, 91, 33]\nprint(\"List:\", items)\ntarget = int(input(\"Enter number to search for: \"))\nfound_index = -1\nfor i in range(len(items)):\n    if items[i] == target:\n        found_index = i\n        break\nif found_index != -1:\n    print(\"Element found at index\", found_index)\nelse:\n    print(\"Element not found in list\")"},{"id":"60-count-frequency","title":"60. Count Frequency of Element in List","category":"Lists & Tuples","tags":["Lists","Counter"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"data = [12, 5, 8, 12, 9, 12, 7, 5, 12, 3]\nprint(\"Data:\", data)\ntarget = int(input(\"Enter number to count: \"))\ncount = 0\nfor item in data:\n    if item == target:\n        count += 1\nprint(\"Element\", target, \"appears\", count, \"times\")"},{"id":"61-remove-duplicates","title":"61. Remove Duplicates from List","category":"Lists & Tuples","tags":["Lists","Filtering"],"complexity":{"time":"O(n^2)","space":"O(n)"},"code":"numbers = [1, 2, 2, 3, 4, 4, 4, 5, 6, 6]\nprint(\"Original list:\", numbers)\nunique_list = []\nfor item in numbers:\n    if item not in unique_list:\n        unique_list.append(item)\nprint(\"List after removing duplicates:\", unique_list)"},{"id":"62-separate-even-odd","title":"62. Separate Even & Odd into Two Lists","category":"Lists & Tuples","tags":["Lists","Conditionals"],"complexity":{"time":"O(n)","space":"O(n)"},"code":"numbers = [11, 24, 35, 48, 59, 62, 77, 80]\nprint(\"Given numbers:\", numbers)\nevens = []\nodds = []\nfor num in numbers:\n    if num % 2 == 0:\n        evens.append(num)\n    else:\n        odds.append(num)\nprint(\"Even numbers:\", evens)\nprint(\"Odd numbers:\", odds)"},{"id":"63-tuple-operations","title":"63. Tuple Indexing, Slicing & Built-ins","category":"Lists & Tuples","tags":["Tuples","Sequences"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"tup = (10, 20, 30, 40, 50, 60, 70)\nprint(\"Tuple:\", tup)\nprint(\"First element:\", tup[0])\nprint(\"Last element:\", tup[-1])\nprint(\"Sliced (index 2 to 5):\", tup[2:5])\nprint(\"Length of tuple:\", len(tup))\nprint(\"Max value:\", max(tup))\nprint(\"Min value:\", min(tup))"},{"id":"64-char-frequency-dict","title":"64. Character Frequency Counter","category":"Dictionaries","tags":["Dictionaries","Counting"],"complexity":{"time":"O(n)","space":"O(k)"},"code":"sentence = input(\"Enter a string: \")\nfreq = {}\nfor ch in sentence:\n    if ch in freq:\n        freq[ch] += 1\n    else:\n        freq[ch] = 1\nfor k, v in freq.items():\n    print(repr(k), \":\", v)"},{"id":"65-word-frequency-dict","title":"65. Word Frequency Counter in Sentence","category":"Dictionaries","tags":["Dictionaries","Words"],"complexity":{"time":"O(n)","space":"O(k)"},"code":"sentence = input(\"Enter a sentence: \")\nwords = sentence.split()\nfreq = {}\nfor w in words:\n    w_lower = w.lower()\n    freq[w_lower] = freq.get(w_lower, 0) + 1\n\nprint(\"Word Frequencies:\")\nfor word, count in freq.items():\n    print(word, \":\", count)"},{"id":"66-student-marks-dict","title":"66. Student Roll Number and Marks Lookup","category":"Dictionaries","tags":["Dictionaries","Lookup"],"complexity":{"time":"O(1)","space":"O(n)"},"code":"students = {\n    101: {\"name\": \"Aarav\", \"marks\": 94},\n    102: {\"name\": \"Diya\", \"marks\": 88},\n    103: {\"name\": \"Rohan\", \"marks\": 91}\n}\nroll = int(input(\"Enter roll number to search (101, 102, 103): \"))\nif roll in students:\n    info = students[roll]\n    print(\"Student Name:\", info[\"name\"])\n    print(\"Marks:\", info[\"marks\"])\nelse:\n    print(\"Student not found!\")"},{"id":"67-phone-book-dict","title":"67. Menu-Driven Phone Directory","category":"Dictionaries","tags":["Dictionaries","Menu Driven"],"complexity":{"time":"O(1)","space":"O(n)"},"code":"phonebook = {\"Amit\": \"9876543210\", \"Priya\": \"9123456780\"}\nprint(\"--- PHONE DIRECTORY ---\")\nprint(\"1. Search Contact\")\nprint(\"2. Add Contact\")\n\nchoice = int(input(\"Enter choice (1 or 2): \"))\nif choice == 1:\n    name = input(\"Enter contact name: \")\n    if name in phonebook:\n        print(\"Phone Number:\", phonebook[name])\n    else:\n        print(\"Contact not found\")\nelif choice == 2:\n    name = input(\"Enter new contact name: \")\n    number = input(\"Enter phone number: \")\n    phonebook[name] = number\n    print(\"Contact saved! Updated directory:\", phonebook)\nelse:\n    print(\"Invalid choice\")"},{"id":"68-invert-dictionary","title":"68. Invert Key-Value Pairs in Dictionary","category":"Dictionaries","tags":["Dictionaries","Transformation"],"complexity":{"time":"O(n)","space":"O(n)"},"code":"original = {\"apple\": \"fruit\", \"carrot\": \"vegetable\", \"banana\": \"fruit\"}\nprint(\"Original dictionary:\", original)\ninverted = {}\nfor key, value in original.items():\n    if value in inverted:\n        inverted[value].append(key)\n    else:\n        inverted[value] = [key]\nprint(\"Inverted dictionary:\", inverted)"},{"id":"69-basic-function","title":"69. Function with Parameters & Return","category":"Functions","tags":["Functions","Basics"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"def calculate_area(length, breadth):\n    return length * breadth\n\nl = float(input(\"Enter length: \"))\nb = float(input(\"Enter breadth: \"))\nresult = calculate_area(l, b)\nprint(\"Area of rectangle =\", result)"},{"id":"70-default-arguments","title":"70. Function with Default Arguments","category":"Functions","tags":["Functions","Arguments"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"def greet(name, msg=\"Welcome to Python Programming\"):\n    print(\"Hello\", name + \",\", msg)\n\ngreet(\"Rohan\")\ngreet(\"Pooja\", \"Have a productive coding session!\")"},{"id":"71-return-multiple-values","title":"71. Function Returning Multiple Values","category":"Functions","tags":["Functions","Tuples"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"def arithmetic_summary(x, y):\n    s = x + y\n    d = x - y\n    p = x * y\n    return s, d, p\n\nnum1 = int(input(\"Enter first number: \"))\nnum2 = int(input(\"Enter second number: \"))\nsum_res, diff_res, prod_res = arithmetic_summary(num1, num2)\nprint(\"Sum =\", sum_res)\nprint(\"Difference =\", diff_res)\nprint(\"Product =\", prod_res)"},{"id":"72-global-variable","title":"72. Local vs Global Scope (global keyword)","category":"Functions","tags":["Functions","Scope"],"complexity":{"time":"O(1)","space":"O(1)"},"code":"counter = 100\n\ndef increment_counter():\n    global counter\n    counter += 10\n    print(\"Inside function counter =\", counter)\n\nprint(\"Before function counter =\", counter)\nincrement_counter()\nprint(\"After function counter =\", counter)"},{"id":"73-prime-function","title":"73. Prime Number Checker Function","category":"Functions","tags":["Functions","Primes"],"complexity":{"time":"O(sqrt n)","space":"O(1)"},"code":"def is_prime(num):\n    if num <= 1:\n        return False\n    for i in range(2, int(num ** 0.5) + 1):\n        if num % i == 0:\n            return False\n    return True\n\nval = int(input(\"Enter an integer: \"))\nif is_prime(val):\n    print(val, \"is a Prime Number\")\nelse:\n    print(val, \"is Not a Prime Number\")"},{"id":"74-binary-search","title":"74. Binary Search Algorithm","category":"Searching & Sorting","tags":["Search","Algorithms"],"complexity":{"time":"O(log n)","space":"O(1)"},"code":"def binary_search(arr, target):\n    low = 0\n    high = len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n\nsorted_list = [10, 23, 35, 48, 59, 70, 85, 96]\nprint(\"Sorted array:\", sorted_list)\nval = int(input(\"Enter value to search: \"))\npos = binary_search(sorted_list, val)\nif pos != -1:\n    print(\"Target found at index\", pos)\nelse:\n    print(\"Target not found in array\")"},{"id":"75-bubble-sort","title":"75. Bubble Sort Algorithm","category":"Searching & Sorting","tags":["Sorting","Algorithms"],"complexity":{"time":"O(n^2)","space":"O(1)"},"code":"def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        swapped = False\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n                swapped = True\n        if not swapped:\n            break\n\nnumbers = [64, 34, 25, 12, 22, 11, 90]\nprint(\"Original array:\", numbers)\nbubble_sort(numbers)\nprint(\"Sorted array:\", numbers)"},{"id":"76-insertion-sort","title":"76. Insertion Sort Algorithm","category":"Searching & Sorting","tags":["Sorting","Algorithms"],"complexity":{"time":"O(n^2)","space":"O(1)"},"code":"def insertion_sort(arr):\n    for i in range(1, len(arr)):\n        key = arr[i]\n        j = i - 1\n        while j >= 0 and arr[j] > key:\n            arr[j + 1] = arr[j]\n            j -= 1\n        arr[j + 1] = key\n\nnumbers = [12, 11, 13, 5, 6]\nprint(\"Original array:\", numbers)\ninsertion_sort(numbers)\nprint(\"Sorted array:\", numbers)"},{"id":"77-selection-sort","title":"77. Selection Sort Algorithm","category":"Searching & Sorting","tags":["Sorting","Algorithms"],"complexity":{"time":"O(n^2)","space":"O(1)"},"code":"def selection_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        min_idx = i\n        for j in range(i + 1, n):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n\ndata = [64, 25, 12, 22, 11]\nprint(\"Original list:\", data)\nselection_sort(data)\nprint(\"Sorted list using Selection Sort:\", data)"},{"id":"78-stack-operations","title":"78. Stack Implementation using List","category":"Data Structures","tags":["Stack","LIFO"],"complexity":{"time":"O(1)","space":"O(n)"},"code":"stack = []\n\ndef push(item):\n    stack.append(item)\n    print(\"Pushed:\", item)\n\ndef pop():\n    if len(stack) == 0:\n        print(\"Stack Underflow! Stack is empty.\")\n    else:\n        removed = stack.pop()\n        print(\"Popped element:\", removed)\n\ndef peek():\n    if len(stack) == 0:\n        print(\"Stack is empty.\")\n    else:\n        print(\"Top element is:\", stack[-1])\n\ndef display():\n    if len(stack) == 0:\n        print(\"Stack is empty.\")\n    else:\n        print(\"Stack elements (bottom to top):\", stack)\n\npush(10)\npush(20)\npush(30)\ndisplay()\npeek()\npop()\ndisplay()"},{"id":"79-queue-operations","title":"79. Queue Implementation using List","category":"Data Structures","tags":["Queue","FIFO"],"complexity":{"time":"O(1)","space":"O(n)"},"code":"queue = []\n\ndef enqueue(item):\n    queue.append(item)\n    print(\"Enqueued:\", item)\n\ndef dequeue():\n    if len(queue) == 0:\n        print(\"Queue Underflow! Queue is empty.\")\n    else:\n        removed = queue.pop(0)\n        print(\"Dequeued element:\", removed)\n\ndef peek():\n    if len(queue) == 0:\n        print(\"Queue is empty.\")\n    else:\n        print(\"Front element is:\", queue[0])\n\ndef display():\n    if len(queue) == 0:\n        print(\"Queue is empty.\")\n    else:\n        print(\"Queue elements:\", queue)\n\nenqueue(\"Alpha\")\nenqueue(\"Beta\")\nenqueue(\"Gamma\")\ndisplay()\npeek()\ndequeue()\ndisplay()"},{"id":"80-recursive-factorial","title":"80. Factorial using Recursion","category":"Recursion & Files","tags":["Recursion","Math"],"complexity":{"time":"O(n)","space":"O(n)"},"code":"def factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)\n\nnum = int(input(\"Enter a positive integer: \"))\nprint(\"Factorial of\", num, \"using recursion =\", factorial(num))"},{"id":"81-recursive-fibonacci","title":"81. Fibonacci using Recursion","category":"Recursion & Files","tags":["Recursion","Series"],"complexity":{"time":"O(2^n)","space":"O(n)"},"code":"def fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        return fibonacci(n - 1) + fibonacci(n - 2)\n\nterms = int(input(\"Enter number of terms: \"))\nprint(\"Fibonacci series:\")\nfor i in range(terms):\n    print(fibonacci(i), end=\" \")\nprint()"},{"id":"82-text-file-write-read","title":"82. Text File Write and Read","category":"Recursion & Files","tags":["Files","I/O"],"complexity":{"time":"O(n)","space":"O(n)"},"code":"with open(\"student_notes.txt\", \"w\") as f:\n    f.write(\"Line 1: Python programming fundamentals\\n\")\n    f.write(\"Line 2: Class 11 and 12 Computer Science\\n\")\n    f.write(\"Line 3: File handling in Python\\n\")\n\nprint(\"File written successfully. Reading back file content:\")\nwith open(\"student_notes.txt\", \"r\") as f:\n    content = f.read()\n    print(content)"},{"id":"83-text-file-count-lines","title":"83. Count Lines, Words & Chars in File","category":"Recursion & Files","tags":["Files","Parsing"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"sample_text = \"Python is an interpreted programming language.\\nIt has clean and readable syntax.\\nWidely used in CBSE CS curriculum.\"\n\nwith open(\"sample.txt\", \"w\") as f:\n    f.write(sample_text)\n\nlines = words = chars = 0\nwith open(\"sample.txt\", \"r\") as f:\n    for line in f:\n        lines += 1\n        words += len(line.split())\n        chars += len(line)\n\nprint(\"Total Lines:\", lines)\nprint(\"Total Words:\", words)\nprint(\"Total Characters:\", chars)"},{"id":"84-filter-lines-by-letter","title":"84. Filter Lines Starting with Letter","category":"Recursion & Files","tags":["Files","Board Exam"],"complexity":{"time":"O(n)","space":"O(1)"},"code":"content = \"\"\"Python is widely used in AI.\nProgramming in Python is simple.\nData structures include lists and dictionaries.\nPractice makes a student proficient.\"\"\"\n\nwith open(\"story.txt\", \"w\") as f:\n    f.write(content)\n\ntarget_char = input(\"Enter letter to filter lines by (e.g. P): \").upper()\ncount = 0\n\nwith open(\"story.txt\", \"r\") as f:\n    for line in f:\n        line = line.strip()\n        if line and line[0].upper() == target_char:\n            print(\"Matching line:\", line)\n            count += 1\n\nprint(\"Total lines starting with\", target_char, \"=\", count)"},{"id":"85-csv-file-operations","title":"85. CSV File Handling with csv Module","category":"Recursion & Files","tags":["csv","File I/O"],"complexity":{"time":"O(n)","space":"O(n)"},"code":"import csv\n\ndata = [\n    [\"Roll\", \"Name\", \"Score\"],\n    [1, \"Aditya\", 95],\n    [2, \"Meera\", 89],\n    [3, \"Kavya\", 92]\n]\n\nwith open(\"report.csv\", \"w\", newline=\"\") as f:\n    writer = csv.writer(f)\n    writer.writerows(data)\n\nprint(\"CSV file written. Reading back rows:\")\nwith open(\"report.csv\", \"r\") as f:\n    reader = csv.reader(f)\n    for row in reader:\n        print(row)"}];
+
+    function initPreviewEditor() {
+      if (!snippetPreviewCodeContainer || previewEditorInstance) return;
+      snippetPreviewCodeContainer.innerHTML = '';
+      previewEditorInstance = CodeMirror(snippetPreviewCodeContainer, {
+        value: '',
+        mode: { name: 'python', version: 3 },
+        theme: 'zenDark',
+        readOnly: true,
+        lineNumbers: true,
+        lineWrapping: true,
+        tabSize: 4
+      });
+    }
+
+    /**
+     * Interface to load code into the active editor instance.
+     * @param {string} codeString - The Python source code.
+     * @param {string} snippetTitle - Optional human-readable name of the snippet.
+     * @param {object} options - Optional configuration (e.g. bypassGuard: boolean).
+     */
+    function loadCodeIntoEditor(codeString, snippetTitle = 'Selected Algorithm', options = {}) {
+      if (!editor) return;
+      const currentVal = editor.getValue().trim();
+
+      // Overwrite guard: If editor contains custom user code differing from snippet, prompt confirmation
+      if (currentVal && currentVal !== codeString.trim() && !options.bypassGuard) {
+        pendingLoadSnippet = { code: codeString, title: snippetTitle };
+        showOverwriteGuard(snippetTitle);
+        return;
+      }
+
+      applyCodeToEditor(codeString, snippetTitle);
+    }
+
+    function applyCodeToEditor(codeString, snippetTitle = '') {
+      if (!editor) return;
+      editor.setValue(codeString);
+      try {
+        localStorage.setItem('etrivo_code_draft', codeString);
+      } catch (e) {}
+      editor.focus();
+      closeSnippetsModal();
+      setPage('editor');
+      showToast(snippetTitle ? `Loaded: ${snippetTitle}` : 'Loaded into canvas');
+    }
+
+    function appendCodeToEditor(codeString, snippetTitle = '') {
+      if (!editor) return;
+      const current = editor.getValue();
+      const separator = current.trim() ? '\n\n# ' + '='.repeat(54) + `\n# Library: ${snippetTitle}\n# ` + '='.repeat(54) + '\n' : '';
+      const combined = current + separator + codeString;
+      editor.setValue(combined);
+      try {
+        localStorage.setItem('etrivo_code_draft', combined);
+      } catch (e) {}
+      editor.focus();
+      closeSnippetsModal();
+      setPage('editor');
+      showToast(`Appended: ${snippetTitle}`);
+    }
+
+    // Expose hook globally on window
+    window.loadCodeIntoEditor = loadCodeIntoEditor;
+
+    /* Overwrite Guard Dialog Logic */
+    function showOverwriteGuard(snippetTitle) {
+      if (overwriteModalText) {
+        overwriteModalText.innerHTML = `Your editor contains active code. Loading <strong class="text-zinc-200">"${snippetTitle}"</strong> will replace your canvas. How would you like to proceed?`;
+      }
+      if (overwriteModal && overwriteModalCard) {
+        overwriteModal.classList.remove('opacity-0', 'pointer-events-none');
+        overwriteModal.classList.add('opacity-100');
+        overwriteModalCard.classList.remove('scale-95');
+        overwriteModalCard.classList.add('scale-100');
+      }
+    }
+
+    function closeOverwriteGuard() {
+      if (overwriteModal && overwriteModalCard) {
+        overwriteModal.classList.remove('opacity-100');
+        overwriteModal.classList.add('opacity-0', 'pointer-events-none');
+        overwriteModalCard.classList.remove('scale-100');
+        overwriteModalCard.classList.add('scale-95');
+      }
+      pendingLoadSnippet = null;
+    }
+
+    if (overwriteCancelBtn) overwriteCancelBtn.addEventListener('click', closeOverwriteGuard);
+
+    if (overwriteConfirmBtn) {
+      overwriteConfirmBtn.addEventListener('click', () => {
+        if (pendingLoadSnippet) {
+          const { code, title } = pendingLoadSnippet;
+          closeOverwriteGuard();
+          applyCodeToEditor(code, title);
+        }
+      });
+    }
+
+    if (overwriteAppendBtn) {
+      overwriteAppendBtn.addEventListener('click', () => {
+        if (pendingLoadSnippet) {
+          const { code, title } = pendingLoadSnippet;
+          closeOverwriteGuard();
+          appendCodeToEditor(code, title);
+        }
+      });
+    }
+
+    if (overwriteModal) {
+      overwriteModal.addEventListener('click', (e) => {
+        if (e.target === overwriteModal) closeOverwriteGuard();
+      });
+    }
+
+    /* Filtering and Card Rendering */
+    function filterSnippets() {
+      const q = searchQuery.toLowerCase().trim();
+      filteredSnippets = allSnippets.filter(item => {
+        const matchesCategory = (activeCategory === 'all' || item.category === activeCategory);
+        if (!matchesCategory) return false;
+        if (!q) return true;
+        return (
+          item.title.toLowerCase().includes(q) ||
+          (item.tags && item.tags.some(t => t.toLowerCase().includes(q))) ||
+          (item.category && item.category.toLowerCase().includes(q))
+        );
+      });
+
+      renderSnippetCards();
+    }
+
+    function renderSnippetCards() {
+      if (!snippetCardsList) return;
+      snippetCardsList.innerHTML = '';
+
+      if (filteredSnippets.length === 0) {
+        snippetCardsList.classList.add('hidden');
+        if (snippetEmptyState) snippetEmptyState.classList.remove('hidden');
+        return;
+      }
+
+      snippetCardsList.classList.remove('hidden');
+      if (snippetEmptyState) snippetEmptyState.classList.add('hidden');
+
+      filteredSnippets.forEach((item) => {
+        const card = document.createElement('div');
+        const isSelected = selectedSnippet && selectedSnippet.id === item.id;
+        card.setAttribute('data-id', item.id);
+        card.className = `snippet-card px-3 py-2.5 rounded-xl border cursor-pointer select-none transition-colors duration-150 ${
+          isSelected 
+            ? 'snippet-card-active border-[#c89f6e]/50' 
+            : 'bg-white/[0.02] border-white/[0.05] hover:bg-white/[0.04] hover:border-white/[0.12]'
+        }`;
+
+        const tagBadge = item.tags && item.tags.length > 0 ? item.tags[0] : '';
+        card.innerHTML = `
+          <div class="flex items-center justify-between gap-2">
+            <h4 class="text-xs sm:text-[13px] font-medium ${isSelected ? 'text-[#eed4b7]' : 'text-zinc-200'} leading-snug truncate">${item.title}</h4>
+            <span class="text-[9.5px] font-mono px-1.5 py-0.5 rounded border border-white/[0.08] text-zinc-400 bg-white/[0.03] flex-shrink-0">${item.category}</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-1.5 mt-1.5">
+            ${tagBadge ? `<span class="text-[9.5px] font-mono px-1.5 py-0.5 rounded bg-sky-500/10 text-sky-300 border border-sky-500/20">#${tagBadge}</span>` : ''}
+            <span class="text-[9.5px] font-mono px-1.5 py-0.5 rounded bg-white/[0.03] text-zinc-400 border border-white/[0.06]">${item.complexity ? item.complexity.time : 'O(1)'}</span>
+          </div>
+        `;
+
+        card.addEventListener('click', () => {
+          selectSnippet(item);
+          if (window.innerWidth < 768) {
+            setMobileTab('preview');
+          }
+        });
+
+        snippetCardsList.appendChild(card);
+      });
+    }
+
+    function selectSnippet(item) {
+      selectedSnippet = item;
+      
+      if (previewTitle) previewTitle.textContent = item.title;
+      if (previewCategoryBadge) previewCategoryBadge.textContent = item.category;
+      if (previewComplexityTime) previewComplexityTime.textContent = `Time: ${item.complexity ? item.complexity.time : 'O(n)'}`;
+      if (previewComplexitySpace) previewComplexitySpace.textContent = `Space: ${item.complexity ? item.complexity.space : 'O(1)'}`;
+
+      if (previewTagsList) {
+        previewTagsList.innerHTML = '';
+        if (item.curriculum) {
+          item.curriculum.forEach(c => {
+            const span = document.createElement('span');
+            span.className = 'text-[10px] font-mono px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/25';
+            span.textContent = c;
+            previewTagsList.appendChild(span);
+          });
+        }
+        if (item.tags) {
+          item.tags.forEach(t => {
+            const span = document.createElement('span');
+            span.className = 'text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/[0.04] text-zinc-400 border border-white/[0.08]';
+            span.textContent = `#${t}`;
+            previewTagsList.appendChild(span);
+          });
+        }
+      }
+
+      if (previewEditorInstance) {
+        previewEditorInstance.setValue(item.code || '');
+        setTimeout(() => {
+          previewEditorInstance.refresh();
+        }, 30);
+      }
+
+      if (snippetCardsList) {
+        snippetCardsList.querySelectorAll('.snippet-card').forEach(c => {
+          if (c.getAttribute('data-id') === item.id) {
+            c.className = 'snippet-card px-3 py-2.5 rounded-xl border cursor-pointer select-none transition-colors duration-150 snippet-card-active border-[#c89f6e]/50';
+            const h4 = c.querySelector('h4');
+            if (h4) { h4.classList.remove('text-zinc-200'); h4.classList.add('text-[#eed4b7]'); }
+          } else {
+            c.className = 'snippet-card px-3 py-2.5 rounded-xl border cursor-pointer select-none transition-colors duration-150 bg-white/[0.02] border-white/[0.05] hover:bg-white/[0.04] hover:border-white/[0.12]';
+            const h4 = c.querySelector('h4');
+            if (h4) { h4.classList.remove('text-[#eed4b7]'); h4.classList.add('text-zinc-200'); }
+          }
+        });
+      }
+    }
+
+    function openSnippetsModal() {
+      initPreviewEditor();
+      if (snippetsModal && snippetsModalCard) {
+        snippetsModal.classList.remove('opacity-0', 'pointer-events-none');
+        snippetsModal.classList.add('opacity-100');
+        snippetsModalCard.classList.remove('scale-95');
+        snippetsModalCard.classList.add('scale-100');
+      }
+
+      if (!selectedSnippet && filteredSnippets.length > 0) {
+        selectSnippet(filteredSnippets[0]);
+      } else if (previewEditorInstance) {
+        setTimeout(() => previewEditorInstance.refresh(), 50);
+      }
+
+      setTimeout(() => {
+        if (snippetSearchInput) {
+          snippetSearchInput.focus();
+          snippetSearchInput.select();
+        }
+      }, 100);
+    }
+
+    function closeSnippetsModal() {
+      if (snippetsModal && snippetsModalCard) {
+        snippetsModal.classList.remove('opacity-100');
+        snippetsModal.classList.add('opacity-0', 'pointer-events-none');
+        snippetsModalCard.classList.remove('scale-100');
+        snippetsModalCard.classList.add('scale-95');
+      }
+    }
+
+    function setMobileTab(tab) {
+      if (!mobileTabBrowse || !mobileTabPreview) return;
+      if (tab === 'browse') {
+        mobileTabBrowse.className = 'px-2.5 py-1 rounded-md text-[#c89f6e] bg-white/[0.08] font-medium';
+        mobileTabPreview.className = 'px-2.5 py-1 rounded-md text-zinc-400';
+        if (snippetsLeftCol) snippetsLeftCol.classList.remove('hidden');
+        if (snippetsRightCol) {
+          snippetsRightCol.classList.add('hidden');
+          snippetsRightCol.classList.remove('flex');
+        }
+      } else {
+        mobileTabPreview.className = 'px-2.5 py-1 rounded-md text-[#c89f6e] bg-white/[0.08] font-medium';
+        mobileTabBrowse.className = 'px-2.5 py-1 rounded-md text-zinc-400';
+        if (snippetsLeftCol) snippetsLeftCol.classList.add('hidden');
+        if (snippetsRightCol) {
+          snippetsRightCol.classList.remove('hidden');
+          snippetsRightCol.classList.add('flex');
+          if (previewEditorInstance) {
+            setTimeout(() => previewEditorInstance.refresh(), 50);
+          }
+        }
+      }
+    }
+
+    if (mobileTabBrowse) mobileTabBrowse.addEventListener('click', () => setMobileTab('browse'));
+    if (mobileTabPreview) mobileTabPreview.addEventListener('click', () => setMobileTab('preview'));
+
+    if (snippetsBtn) snippetsBtn.addEventListener('click', openSnippetsModal);
+    if (closeSnippetsModalBtn) closeSnippetsModalBtn.addEventListener('click', closeSnippetsModal);
+
+    if (snippetsModal) {
+      snippetsModal.addEventListener('click', (e) => {
+        if (e.target === snippetsModal) closeSnippetsModal();
+      });
+    }
+
+    if (snippetSearchInput) {
+      snippetSearchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        if (clearSearchBtn) clearSearchBtn.classList.toggle('hidden', !searchQuery);
+        filterSnippets();
+      });
+    }
+
+    if (clearSearchBtn) {
+      clearSearchBtn.addEventListener('click', () => {
+        snippetSearchInput.value = '';
+        searchQuery = '';
+        clearSearchBtn.classList.add('hidden');
+        filterSnippets();
+        snippetSearchInput.focus();
+      });
+    }
+
+    if (resetSearchFilterBtn) {
+      resetSearchFilterBtn.addEventListener('click', () => {
+        if (snippetSearchInput) snippetSearchInput.value = '';
+        searchQuery = '';
+        if (clearSearchBtn) clearSearchBtn.classList.add('hidden');
+        activeCategory = 'all';
+        if (categoryChipsContainer) {
+          categoryChipsContainer.querySelectorAll('.snippet-cat-chip').forEach(btn => {
+            if (btn.getAttribute('data-cat') === 'all') {
+              btn.className = 'snippet-cat-chip whitespace-nowrap px-2.5 py-1 rounded-full border transition-all text-[#c89f6e] bg-[#c89f6e]/15 border-[#c89f6e]/40 font-medium';
+            } else {
+              btn.className = 'snippet-cat-chip whitespace-nowrap px-2.5 py-1 rounded-full border transition-all text-zinc-400 bg-white/[0.02] border-white/[0.06] hover:text-zinc-200 hover:border-white/[0.15]';
+            }
+          });
+        }
+        filterSnippets();
+      });
+    }
+
+    if (categoryChipsContainer) {
+      categoryChipsContainer.addEventListener('click', (e) => {
+        const chip = e.target.closest('.snippet-cat-chip');
+        if (!chip) return;
+        activeCategory = chip.getAttribute('data-cat') || 'all';
+        categoryChipsContainer.querySelectorAll('.snippet-cat-chip').forEach(btn => {
+          if (btn === chip) {
+            btn.className = 'snippet-cat-chip whitespace-nowrap px-2.5 py-1 rounded-full border transition-all text-[#c89f6e] bg-[#c89f6e]/15 border-[#c89f6e]/40 font-medium';
+          } else {
+            btn.className = 'snippet-cat-chip whitespace-nowrap px-2.5 py-1 rounded-full border transition-all text-zinc-400 bg-white/[0.02] border-white/[0.06] hover:text-zinc-200 hover:border-white/[0.15]';
+          }
+        });
+        filterSnippets();
+      });
+    }
+
+    if (copySnippetBtn) {
+      copySnippetBtn.addEventListener('click', () => {
+        if (!selectedSnippet) return;
+        navigator.clipboard.writeText(selectedSnippet.code).then(() => {
+          if (copySnippetBtnText) copySnippetBtnText.textContent = 'Copied!';
+          copySnippetBtn.classList.add('text-emerald-400', 'border-emerald-500/40');
+          setTimeout(() => {
+            if (copySnippetBtnText) copySnippetBtnText.textContent = 'Copy Code';
+            copySnippetBtn.classList.remove('text-emerald-400', 'border-emerald-500/40');
+          }, 2000);
+        }).catch(() => {
+          showToast('Code copied');
+        });
+      });
+    }
+
+    if (loadSnippetBtn) {
+      loadSnippetBtn.addEventListener('click', () => {
+        if (!selectedSnippet) return;
+        loadCodeIntoEditor(selectedSnippet.code, selectedSnippet.title);
+      });
+    }
+
+    async function initSnippetLibrary() {
+      try {
+        const response = await fetch('snippets.json');
+        if (response.ok) {
+          allSnippets = await response.json();
+        } else {
+          allSnippets = EMBEDDED_SNIPPETS;
+        }
+      } catch (err) {
+        allSnippets = EMBEDDED_SNIPPETS;
+      }
+      filterSnippets();
+      if (filteredSnippets.length > 0) {
+        selectedSnippet = filteredSnippets[0];
+      }
+    }
+
+
+    window.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+        e.preventDefault();
+        executePythonCode();
+      } else if ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K')) {
+        e.preventDefault();
+        if (snippetsModal && !snippetsModal.classList.contains('pointer-events-none')) {
+          closeSnippetsModal();
+        } else {
+          openSnippetsModal();
+        }
+      } else if (e.key === 'Escape') {
+        if (overwriteModal && !overwriteModal.classList.contains('pointer-events-none')) {
+          closeOverwriteGuard();
+        } else if (snippetsModal && !snippetsModal.classList.contains('pointer-events-none')) {
+          closeSnippetsModal();
+        } else if (legalModal && !legalModal.classList.contains('pointer-events-none')) {
+          closeLegalModal();
+        } else if (activePage === 'terminal') {
+          setPage('editor');
+        }
+      }
+    });
+
+    function bootstrapApplication() {
+      initEditor();
+      checkPythonEngine();
+      initSnippetLibrary();
+      setPage('editor');
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', bootstrapApplication);
+    } else {
+      bootstrapApplication();
+    }
+  </script>
+</body>
+</html>

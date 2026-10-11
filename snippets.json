@@ -1,0 +1,1192 @@
+[
+  {
+    "id": "01-hello-world",
+    "title": "01. Print Statements & Output",
+    "category": "Getting Started",
+    "tags": [
+      "Print",
+      "Output"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "print(\"Hello, World!\")\nprint(\"Welcome to Python Programming\")\nprint(\"Python is simple and powerful\")"
+  },
+  {
+    "id": "02-input-name",
+    "title": "02. User Input with input()",
+    "category": "Getting Started",
+    "tags": [
+      "Input",
+      "Strings"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "name = input(\"Enter your name: \")\nage = int(input(\"Enter your age: \"))\nprint(\"Hello\", name, \"you are\", age, \"years old\")"
+  },
+  {
+    "id": "03-add-two-numbers",
+    "title": "03. Add Two Numbers with int(input())",
+    "category": "Getting Started",
+    "tags": [
+      "Input",
+      "Arithmetic"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "num1 = int(input(\"Enter first number: \"))\nnum2 = int(input(\"Enter second number: \"))\ntotal = num1 + num2\nprint(\"Sum =\", total)"
+  },
+  {
+    "id": "04-arithmetic-operators",
+    "title": "04. All Arithmetic Operators",
+    "category": "Getting Started",
+    "tags": [
+      "Operators",
+      "Math"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nprint(\"Addition:\", a + b)\nprint(\"Subtraction:\", a - b)\nprint(\"Multiplication:\", a * b)\nprint(\"Division:\", a / b)\nprint(\"Floor Division:\", a // b)\nprint(\"Modulus:\", a % b)\nprint(\"Exponentiation:\", a ** b)"
+  },
+  {
+    "id": "05-simple-interest",
+    "title": "05. Calculate Simple Interest",
+    "category": "Getting Started",
+    "tags": [
+      "Math",
+      "Formulas"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "p = float(input(\"Enter Principal amount: \"))\nr = float(input(\"Enter Rate of interest: \"))\nt = float(input(\"Enter Time period (years): \"))\nsi = (p * r * t) / 100\namount = p + si\nprint(\"Simple Interest =\", si)\nprint(\"Total Amount =\", amount)"
+  },
+  {
+    "id": "06-compound-interest",
+    "title": "06. Calculate Compound Interest",
+    "category": "Getting Started",
+    "tags": [
+      "Math",
+      "Finance"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "p = float(input(\"Enter Principal amount: \"))\nr = float(input(\"Enter Annual Interest Rate (%): \"))\nt = float(input(\"Enter Time period (years): \"))\namount = p * ((1 + r / 100) ** t)\nci = amount - p\nprint(\"Compound Interest =\", round(ci, 2))\nprint(\"Total Accumulated Amount =\", round(amount, 2))"
+  },
+  {
+    "id": "07-area-perimeter-circle",
+    "title": "07. Area & Circumference of Circle",
+    "category": "Getting Started",
+    "tags": [
+      "Geometry",
+      "Math"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "radius = float(input(\"Enter radius of circle: \"))\npi = 3.14159\narea = pi * radius * radius\ncircumference = 2 * pi * radius\nprint(\"Area =\", area)\nprint(\"Circumference =\", circumference)"
+  },
+  {
+    "id": "08-herons-formula",
+    "title": "08. Triangle Area by Heron's Formula",
+    "category": "Getting Started",
+    "tags": [
+      "Geometry",
+      "Math"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "import math\n\na = float(input(\"Enter first side (a): \"))\nb = float(input(\"Enter second side (b): \"))\nc = float(input(\"Enter third side (c): \"))\n\ns = (a + b + c) / 2\narea = math.sqrt(s * (s - a) * (s - b) * (s - c))\nprint(\"Semi-perimeter (s) =\", s)\nprint(\"Area of Triangle by Heron's Formula =\", round(area, 4))"
+  },
+  {
+    "id": "09-swap-two-numbers",
+    "title": "09. Swap Two Numbers (Pythonic)",
+    "category": "Getting Started",
+    "tags": [
+      "Variables",
+      "Swap"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "a = int(input(\"Enter first number (a): \"))\nb = int(input(\"Enter second number (b): \"))\nprint(\"Before swapping: a =\", a, \"b =\", b)\na, b = b, a\nprint(\"After swapping: a =\", a, \"b =\", b)"
+  },
+  {
+    "id": "10-swap-with-temp",
+    "title": "10. Swap Using Third Variable",
+    "category": "Getting Started",
+    "tags": [
+      "Variables",
+      "Logic"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "a = int(input(\"Enter first number (a): \"))\nb = int(input(\"Enter second number (b): \"))\nprint(\"Before swapping: a =\", a, \"b =\", b)\ntemp = a\na = b\nb = temp\nprint(\"After swapping: a =\", a, \"b =\", b)"
+  },
+  {
+    "id": "11-celsius-to-fahrenheit",
+    "title": "11. Temperature Converter (C to F)",
+    "category": "Getting Started",
+    "tags": [
+      "Conversion",
+      "Math"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "celsius = float(input(\"Enter temperature in Celsius: \"))\nfahrenheit = (celsius * 9 / 5) + 32\nprint(\"Temperature in Fahrenheit:\", fahrenheit)"
+  },
+  {
+    "id": "12-even-or-odd",
+    "title": "12. Check Even or Odd",
+    "category": "Decision Making",
+    "tags": [
+      "Conditionals",
+      "Math"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "num = int(input(\"Enter an integer: \"))\nif num % 2 == 0:\n    print(num, \"is Even\")\nelse:\n    print(num, \"is Odd\")"
+  },
+  {
+    "id": "13-positive-negative-zero",
+    "title": "13. Positive, Negative, or Zero",
+    "category": "Decision Making",
+    "tags": [
+      "Conditionals",
+      "Logic"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"The number is Positive\")\nelif num < 0:\n    print(\"The number is Negative\")\nelse:\n    print(\"The number is Zero\")"
+  },
+  {
+    "id": "14-largest-two-numbers",
+    "title": "14. Largest of Two Numbers",
+    "category": "Decision Making",
+    "tags": [
+      "Conditionals",
+      "Comparison"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nif a > b:\n    print(\"Largest number is:\", a)\nelif b > a:\n    print(\"Largest number is:\", b)\nelse:\n    print(\"Both numbers are equal\")"
+  },
+  {
+    "id": "15-largest-three-numbers",
+    "title": "15. Largest of Three Numbers",
+    "category": "Decision Making",
+    "tags": [
+      "Conditionals",
+      "Comparison"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nc = int(input(\"Enter third number: \"))\nif a >= b and a >= c:\n    largest = a\nelif b >= a and b >= c:\n    largest = b\nelse:\n    largest = c\nprint(\"The largest number is:\", largest)"
+  },
+  {
+    "id": "16-descending-order-three",
+    "title": "16. Arrange 3 Numbers in Descending Order",
+    "category": "Decision Making",
+    "tags": [
+      "Conditionals",
+      "Sorting"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nc = int(input(\"Enter third number: \"))\n\nif a >= b and a >= c:\n    if b >= c:\n        print(\"Descending order:\", a, b, c)\n    else:\n        print(\"Descending order:\", a, c, b)\nelif b >= a and b >= c:\n    if a >= c:\n        print(\"Descending order:\", b, a, c)\n    else:\n        print(\"Descending order:\", b, c, a)\nelse:\n    if a >= b:\n        print(\"Descending order:\", c, a, b)\n    else:\n        print(\"Descending order:\", c, b, a)"
+  },
+  {
+    "id": "17-ascending-order-three",
+    "title": "17. Arrange 3 Numbers in Ascending Order",
+    "category": "Decision Making",
+    "tags": [
+      "Conditionals",
+      "Sorting"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nc = int(input(\"Enter third number: \"))\n\nif a <= b and a <= c:\n    if b <= c:\n        print(\"Ascending order:\", a, b, c)\n    else:\n        print(\"Ascending order:\", a, c, b)\nelif b <= a and b <= c:\n    if a <= c:\n        print(\"Ascending order:\", b, a, c)\n    else:\n        print(\"Ascending order:\", b, c, a)\nelse:\n    if a <= b:\n        print(\"Ascending order:\", c, a, b)\n    else:\n        print(\"Ascending order:\", c, b, a)"
+  },
+  {
+    "id": "18-leap-year",
+    "title": "18. Leap Year Checker",
+    "category": "Decision Making",
+    "tags": [
+      "Conditionals",
+      "Logic"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "year = int(input(\"Enter a year: \"))\nif (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):\n    print(year, \"is a Leap Year\")\nelse:\n    print(year, \"is not a Leap Year\")"
+  },
+  {
+    "id": "19-vowel-or-consonant",
+    "title": "19. Check Vowel or Consonant",
+    "category": "Decision Making",
+    "tags": [
+      "Conditionals",
+      "Characters"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "ch = input(\"Enter a single letter: \").lower()\nif len(ch) == 1 and ch.isalpha():\n    if ch in \"aeiou\":\n        print(ch, \"is a Vowel\")\n    else:\n        print(ch, \"is a Consonant\")\nelse:\n    print(\"Invalid input! Please enter a single alphabetic letter.\")"
+  },
+  {
+    "id": "20-menu-calculator",
+    "title": "20. Menu-Driven Calculator",
+    "category": "Decision Making",
+    "tags": [
+      "Menu Driven",
+      "Conditionals"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "print(\"--- CALCULATOR MENU ---\")\nprint(\"1. Addition (+)\")\nprint(\"2. Subtraction (-)\")\nprint(\"3. Multiplication (*)\")\nprint(\"4. Division (/)\")\n\nchoice = int(input(\"Enter your choice (1-4): \"))\nnum1 = float(input(\"Enter first number: \"))\nnum2 = float(input(\"Enter second number: \"))\n\nif choice == 1:\n    print(\"Result:\", num1 + num2)\nelif choice == 2:\n    print(\"Result:\", num1 - num2)\nelif choice == 3:\n    print(\"Result:\", num1 * num2)\nelif choice == 4:\n    if num2 != 0:\n        print(\"Result:\", num1 / num2)\n    else:\n        print(\"Error: Division by zero is not allowed\")\nelse:\n    print(\"Invalid choice selected\")"
+  },
+  {
+    "id": "21-menu-area-shapes",
+    "title": "21. Menu-Driven Area of Shapes",
+    "category": "Decision Making",
+    "tags": [
+      "Menu Driven",
+      "Geometry"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "print(\"--- AREA OF SHAPES MENU ---\")\nprint(\"1. Area of Circle\")\nprint(\"2. Area of Rectangle\")\nprint(\"3. Area of Triangle\")\n\nchoice = int(input(\"Enter your choice (1-3): \"))\n\nif choice == 1:\n    r = float(input(\"Enter radius: \"))\n    area = 3.14159 * r * r\n    print(\"Area of Circle =\", area)\nelif choice == 2:\n    length = float(input(\"Enter length: \"))\n    breadth = float(input(\"Enter breadth: \"))\n    area = length * breadth\n    print(\"Area of Rectangle =\", area)\nelif choice == 3:\n    base = float(input(\"Enter base: \"))\n    height = float(input(\"Enter height: \"))\n    area = 0.5 * base * height\n    print(\"Area of Triangle =\", area)\nelse:\n    print(\"Invalid choice selected\")"
+  },
+  {
+    "id": "22-grade-calculator",
+    "title": "22. Student Marks & Grade System",
+    "category": "Decision Making",
+    "tags": [
+      "Conditionals",
+      "Evaluation"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "marks = float(input(\"Enter percentage marks (0-100): \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"E (Needs Improvement)\"\nprint(\"Calculated Grade:\", grade)"
+  },
+  {
+    "id": "23-triangle-type",
+    "title": "23. Triangle Validity & Type",
+    "category": "Decision Making",
+    "tags": [
+      "Conditionals",
+      "Geometry"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "s1 = float(input(\"Enter first side: \"))\ns2 = float(input(\"Enter second side: \"))\ns3 = float(input(\"Enter third side: \"))\n\nif s1 + s2 > s3 and s2 + s3 > s1 and s1 + s3 > s2:\n    if s1 == s2 == s3:\n        print(\"Equilateral Triangle\")\n    elif s1 == s2 or s2 == s3 or s1 == s3:\n        print(\"Isosceles Triangle\")\n    else:\n        print(\"Scalene Triangle\")\nelse:\n    print(\"These sides cannot form a valid triangle\")"
+  },
+  {
+    "id": "24-quadratic-roots",
+    "title": "24. Roots of Quadratic Equation",
+    "category": "Decision Making",
+    "tags": [
+      "Math",
+      "Algebra"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "a = float(input(\"Enter coefficient a: \"))\nb = float(input(\"Enter coefficient b: \"))\nc = float(input(\"Enter coefficient c: \"))\n\nd = b ** 2 - 4 * a * c\n\nif d > 0:\n    root1 = (-b + d ** 0.5) / (2 * a)\n    root2 = (-b - d ** 0.5) / (2 * a)\n    print(\"Real and Distinct Roots:\", round(root1, 4), \"and\", round(root2, 4))\nelif d == 0:\n    root = -b / (2 * a)\n    print(\"Real and Equal Root:\", round(root, 4))\nelse:\n    real_part = -b / (2 * a)\n    imag_part = (abs(d) ** 0.5) / (2 * a)\n    print(\"Complex Roots:\", round(real_part, 4), \"+-\", round(imag_part, 4), \"i\")"
+  },
+  {
+    "id": "25-print-1-to-n",
+    "title": "25. Print 1 to N using for Loop",
+    "category": "Iteration",
+    "tags": [
+      "for Loop",
+      "range"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "n = int(input(\"Enter value of n: \"))\nfor i in range(1, n + 1):\n    print(i, end=\" \")\nprint()"
+  },
+  {
+    "id": "26-print-n-to-1",
+    "title": "26. Print N down to 1 using while Loop",
+    "category": "Iteration",
+    "tags": [
+      "while Loop",
+      "Counter"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "n = int(input(\"Enter value of n: \"))\nwhile n >= 1:\n    print(n, end=\" \")\n    n -= 1\nprint()"
+  },
+  {
+    "id": "27-multiplication-table",
+    "title": "27. Multiplication Table of a Number",
+    "category": "Iteration",
+    "tags": [
+      "for Loop",
+      "Math"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "num = int(input(\"Enter a number for multiplication table: \"))\nfor i in range(1, 11):\n    print(num, \"x\", i, \"=\", num * i)"
+  },
+  {
+    "id": "28-sum-natural-numbers",
+    "title": "28. Sum of First N Natural Numbers",
+    "category": "Iteration",
+    "tags": [
+      "Loops",
+      "Math"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "n = int(input(\"Enter a positive integer n: \"))\ntotal = 0\nfor i in range(1, n + 1):\n    total += i\nprint(\"Sum of first\", n, \"natural numbers =\", total)"
+  },
+  {
+    "id": "29-factorial-loop",
+    "title": "29. Factorial using for Loop",
+    "category": "Iteration",
+    "tags": [
+      "Loops",
+      "Math"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "n = int(input(\"Enter a non-negative integer: \"))\nfact = 1\nfor i in range(1, n + 1):\n    fact *= i\nprint(\"Factorial of\", n, \"=\", fact)"
+  },
+  {
+    "id": "30-reverse-number",
+    "title": "30. Reverse a Number using while Loop",
+    "category": "Iteration",
+    "tags": [
+      "while Loop",
+      "Digits"
+    ],
+    "complexity": {
+      "time": "O(log n)",
+      "space": "O(1)"
+    },
+    "code": "num = int(input(\"Enter an integer: \"))\noriginal = num\nrev = 0\nwhile num > 0:\n    digit = num % 10\n    rev = rev * 10 + digit\n    num = num // 10\nprint(\"Reversed number of\", original, \"=\", rev)"
+  },
+  {
+    "id": "31-sum-of-digits",
+    "title": "31. Sum of Digits of an Integer",
+    "category": "Iteration",
+    "tags": [
+      "while Loop",
+      "Digits"
+    ],
+    "complexity": {
+      "time": "O(log n)",
+      "space": "O(1)"
+    },
+    "code": "num = int(input(\"Enter an integer: \"))\ntemp = num\ntotal = 0\nwhile temp > 0:\n    digit = temp % 10\n    total += digit\n    temp = temp // 10\nprint(\"Sum of digits of\", num, \"=\", total)"
+  },
+  {
+    "id": "32-count-digits",
+    "title": "32. Count Number of Digits in Integer",
+    "category": "Iteration",
+    "tags": [
+      "while Loop",
+      "Digits"
+    ],
+    "complexity": {
+      "time": "O(log n)",
+      "space": "O(1)"
+    },
+    "code": "num = int(input(\"Enter an integer: \"))\ntemp = abs(num)\ncount = 0\nif temp == 0:\n    count = 1\nelse:\n    while temp > 0:\n        count += 1\n        temp = temp // 10\nprint(\"Total number of digits =\", count)"
+  },
+  {
+    "id": "33-palindrome-number",
+    "title": "33. Palindrome Number Checker",
+    "category": "Iteration",
+    "tags": [
+      "while Loop",
+      "Logic"
+    ],
+    "complexity": {
+      "time": "O(log n)",
+      "space": "O(1)"
+    },
+    "code": "num = int(input(\"Enter an integer: \"))\ntemp = num\nrev = 0\nwhile temp > 0:\n    digit = temp % 10\n    rev = rev * 10 + digit\n    temp = temp // 10\nif num == rev:\n    print(num, \"is a Palindrome Number\")\nelse:\n    print(num, \"is not a Palindrome Number\")"
+  },
+  {
+    "id": "34-armstrong-number",
+    "title": "34. Armstrong Number Checker",
+    "category": "Iteration",
+    "tags": [
+      "while Loop",
+      "Math"
+    ],
+    "complexity": {
+      "time": "O(log n)",
+      "space": "O(1)"
+    },
+    "code": "num = int(input(\"Enter an integer: \"))\ntemp = num\norder = len(str(num))\ntotal = 0\nwhile temp > 0:\n    digit = temp % 10\n    total += digit ** order\n    temp = temp // 10\nif num == total:\n    print(num, \"is an Armstrong Number\")\nelse:\n    print(num, \"is not an Armstrong Number\")"
+  },
+  {
+    "id": "35-prime-number",
+    "title": "35. Prime Number Checker using Loop",
+    "category": "Iteration",
+    "tags": [
+      "Loops",
+      "Primes"
+    ],
+    "complexity": {
+      "time": "O(sqrt n)",
+      "space": "O(1)"
+    },
+    "code": "num = int(input(\"Enter an integer greater than 1: \"))\nis_prime = True\nif num <= 1:\n    is_prime = False\nelse:\n    for i in range(2, int(num ** 0.5) + 1):\n        if num % i == 0:\n            is_prime = False\n            break\nif is_prime:\n    print(num, \"is a Prime Number\")\nelse:\n    print(num, \"is not a Prime Number\")"
+  },
+  {
+    "id": "36-primes-in-range",
+    "title": "36. Prime Numbers in a Given Range",
+    "category": "Iteration",
+    "tags": [
+      "Nested Loops",
+      "Primes"
+    ],
+    "complexity": {
+      "time": "O(n sqrt n)",
+      "space": "O(1)"
+    },
+    "code": "lower = int(input(\"Enter lower limit: \"))\nupper = int(input(\"Enter upper limit: \"))\nprint(\"Prime numbers between\", lower, \"and\", upper, \":\")\nfor num in range(lower, upper + 1):\n    if num > 1:\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                break\n        else:\n            print(num, end=\" \")\nprint()"
+  },
+  {
+    "id": "37-fibonacci-series",
+    "title": "37. Fibonacci Series up to N Terms",
+    "category": "Iteration",
+    "tags": [
+      "while Loop",
+      "Series"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "n = int(input(\"Enter number of terms: \"))\na, b = 0, 1\ncount = 0\nprint(\"Fibonacci Series:\")\nwhile count < n:\n    print(a, end=\" \")\n    nth = a + b\n    a = b\n    b = nth\n    count += 1\nprint()"
+  },
+  {
+    "id": "38-gcd-hcf",
+    "title": "38. Greatest Common Divisor (GCD/HCF)",
+    "category": "Iteration",
+    "tags": [
+      "Euclidean",
+      "Math"
+    ],
+    "complexity": {
+      "time": "O(log(min(a,b)))",
+      "space": "O(1)"
+    },
+    "code": "a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nx, y = a, b\nwhile y != 0:\n    x, y = y, x % y\nprint(\"GCD / HCF of\", a, \"and\", b, \"=\", x)"
+  },
+  {
+    "id": "39-lcm-two-numbers",
+    "title": "39. Least Common Multiple (LCM)",
+    "category": "Iteration",
+    "tags": [
+      "while Loop",
+      "Math"
+    ],
+    "complexity": {
+      "time": "O(a*b)",
+      "space": "O(1)"
+    },
+    "code": "a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\ngreater = max(a, b)\nwhile True:\n    if greater % a == 0 and greater % b == 0:\n        lcm = greater\n        break\n    greater += 1\nprint(\"LCM of\", a, \"and\", b, \"=\", lcm)"
+  },
+  {
+    "id": "40-sum-series-powers",
+    "title": "40. Sum of Series 1 + x + x^2 + ... + x^n",
+    "category": "Iteration",
+    "tags": [
+      "for Loop",
+      "Series"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "x = int(input(\"Enter base value (x): \"))\nn = int(input(\"Enter number of terms (n): \"))\ntotal = 0\nfor i in range(n + 1):\n    total += x ** i\nprint(\"Sum of series 1 + x + x^2 + ... + x^n =\", total)"
+  },
+  {
+    "id": "41-sum-series-fraction",
+    "title": "41. Sum of Series 1 + 1/2 + 1/3 + ... + 1/n",
+    "category": "Iteration",
+    "tags": [
+      "for Loop",
+      "Series"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "n = int(input(\"Enter value of n: \"))\ntotal = 0.0\nfor i in range(1, n + 1):\n    total += 1.0 / i\nprint(\"Sum of series 1 + 1/2 + 1/3 + ... + 1/n =\", round(total, 4))"
+  },
+  {
+    "id": "42-alternating-series",
+    "title": "42. Sum of Alternating Power Series",
+    "category": "Iteration",
+    "tags": [
+      "Series",
+      "Math"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "x = float(input(\"Enter value of x: \"))\nn = int(input(\"Enter number of terms (n): \"))\ntotal = 0.0\n\nfor i in range(1, n + 1):\n    term = ((x ** i) / i) * ((-1) ** (i + 1))\n    total += term\n\nprint(\"Sum of alternating series =\", round(total, 4))"
+  },
+  {
+    "id": "43-break-continue",
+    "title": "43. Control Statements (break & continue)",
+    "category": "Iteration",
+    "tags": [
+      "break",
+      "continue"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "print(\"Demonstrating continue (skipping 3):\")\nfor i in range(1, 6):\n    if i == 3:\n        continue\n    print(i, end=\" \")\nprint()\n\nprint(\"Demonstrating break (stopping at 4):\")\nfor i in range(1, 10):\n    if i == 4:\n        break\n    print(i, end=\" \")\nprint()"
+  },
+  {
+    "id": "44-star-right-triangle",
+    "title": "44. Right-Angled Star Triangle",
+    "category": "Patterns",
+    "tags": [
+      "Nested Loops",
+      "Stars"
+    ],
+    "complexity": {
+      "time": "O(n^2)",
+      "space": "O(1)"
+    },
+    "code": "n = int(input(\"Enter number of rows: \"))\nfor i in range(1, n + 1):\n    print(\"*\" * i)"
+  },
+  {
+    "id": "45-inverted-star-triangle",
+    "title": "45. Inverted Star Triangle",
+    "category": "Patterns",
+    "tags": [
+      "Nested Loops",
+      "Stars"
+    ],
+    "complexity": {
+      "time": "O(n^2)",
+      "space": "O(1)"
+    },
+    "code": "n = int(input(\"Enter number of rows: \"))\nfor i in range(n, 0, -1):\n    print(\"*\" * i)"
+  },
+  {
+    "id": "46-number-triangle",
+    "title": "46. Number Triangle Pattern",
+    "category": "Patterns",
+    "tags": [
+      "Nested Loops",
+      "Numbers"
+    ],
+    "complexity": {
+      "time": "O(n^2)",
+      "space": "O(1)"
+    },
+    "code": "n = int(input(\"Enter number of rows: \"))\nfor i in range(1, n + 1):\n    for j in range(1, i + 1):\n        print(j, end=\" \")\n    print()"
+  },
+  {
+    "id": "47-floyds-triangle",
+    "title": "47. Floyd's Triangle Pattern",
+    "category": "Patterns",
+    "tags": [
+      "Nested Loops",
+      "Numbers"
+    ],
+    "complexity": {
+      "time": "O(n^2)",
+      "space": "O(1)"
+    },
+    "code": "n = int(input(\"Enter number of rows: \"))\nnum = 1\nfor i in range(1, n + 1):\n    for j in range(1, i + 1):\n        print(num, end=\" \")\n        num += 1\n    print()"
+  },
+  {
+    "id": "48-star-pyramid",
+    "title": "48. Centered Star Pyramid",
+    "category": "Patterns",
+    "tags": [
+      "Nested Loops",
+      "Pyramid"
+    ],
+    "complexity": {
+      "time": "O(n^2)",
+      "space": "O(1)"
+    },
+    "code": "n = int(input(\"Enter number of rows: \"))\nfor i in range(1, n + 1):\n    spaces = \" \" * (n - i)\n    stars = \"*\" * (2 * i - 1)\n    print(spaces + stars)"
+  },
+  {
+    "id": "49-string-traversal",
+    "title": "49. String Traversal & Inspection",
+    "category": "Strings",
+    "tags": [
+      "Strings",
+      "Methods"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "text = input(\"Enter a string: \")\nprint(\"Character analysis:\")\nfor char in text:\n    print(char, \"-> IsAlpha:\", char.isalpha(), \"| IsDigit:\", char.isdigit())"
+  },
+  {
+    "id": "50-count-vowels-consonants",
+    "title": "50. Count Vowels, Consonants, Digits",
+    "category": "Strings",
+    "tags": [
+      "Strings",
+      "Counter"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "text = input(\"Enter a sentence: \")\nvowels = consonants = digits = spaces = 0\nvowel_set = \"aeiouAEIOU\"\n\nfor ch in text:\n    if ch in vowel_set:\n        vowels += 1\n    elif ch.isalpha():\n        consonants += 1\n    elif ch.isdigit():\n        digits += 1\n    elif ch.isspace():\n        spaces += 1\n\nprint(\"Vowels:\", vowels)\nprint(\"Consonants:\", consonants)\nprint(\"Digits:\", digits)\nprint(\"Spaces:\", spaces)"
+  },
+  {
+    "id": "51-palindrome-string",
+    "title": "51. Palindrome String Checker",
+    "category": "Strings",
+    "tags": [
+      "Strings",
+      "Slicing"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(n)"
+    },
+    "code": "s = input(\"Enter a word or string: \")\ncleaned = s.replace(\" \", \"\").lower()\nif cleaned == cleaned[::-1]:\n    print(\"'\", s, \"' is a Palindrome String\")\nelse:\n    print(\"'\", s, \"' is not a Palindrome String\")"
+  },
+  {
+    "id": "52-reverse-string",
+    "title": "52. Reverse a String without Built-ins",
+    "category": "Strings",
+    "tags": [
+      "Strings",
+      "Loops"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(n)"
+    },
+    "code": "s = input(\"Enter a string to reverse: \")\nreversed_str = \"\"\nfor char in s:\n    reversed_str = char + reversed_str\nprint(\"Reversed string:\", reversed_str)"
+  },
+  {
+    "id": "53-title-case-words",
+    "title": "53. Capitalize First Letter of Each Word",
+    "category": "Strings",
+    "tags": [
+      "Strings",
+      "Lists"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(n)"
+    },
+    "code": "sentence = input(\"Enter a sentence: \")\nwords = sentence.split()\ncapitalized_words = [w.capitalize() for w in words]\nresult = \" \".join(capitalized_words)\nprint(\"Capitalized result:\", result)"
+  },
+  {
+    "id": "54-anagram-checker",
+    "title": "54. Check Anagram Strings",
+    "category": "Strings",
+    "tags": [
+      "Strings",
+      "Sorting"
+    ],
+    "complexity": {
+      "time": "O(n log n)",
+      "space": "O(n)"
+    },
+    "code": "str1 = input(\"Enter first string: \")\nstr2 = input(\"Enter second string: \")\n\nclean1 = sorted(str1.replace(\" \", \"\").lower())\nclean2 = sorted(str2.replace(\" \", \"\").lower())\n\nif clean1 == clean2:\n    print(\"The strings are Anagrams\")\nelse:\n    print(\"The strings are Not Anagrams\")"
+  },
+  {
+    "id": "55-input-list-numbers",
+    "title": "55. Input a List of Numbers from User",
+    "category": "Lists & Tuples",
+    "tags": [
+      "Lists",
+      "Input"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(n)"
+    },
+    "code": "n = int(input(\"How many elements do you want to enter? \"))\nnumbers = []\nfor i in range(n):\n    val = int(input(\"Enter element \" + str(i + 1) + \": \"))\n    numbers.append(val)\nprint(\"User created list:\", numbers)"
+  },
+  {
+    "id": "56-max-min-in-list",
+    "title": "56. Find Maximum and Minimum in List",
+    "category": "Lists & Tuples",
+    "tags": [
+      "Lists",
+      "Traversal"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "numbers = [45, 12, 89, 23, 67, 91, 5, 34]\nprint(\"List:\", numbers)\nmaximum = numbers[0]\nminimum = numbers[0]\nfor num in numbers:\n    if num > maximum:\n        maximum = num\n    if num < minimum:\n        minimum = num\nprint(\"Maximum element =\", maximum)\nprint(\"Minimum element =\", minimum)"
+  },
+  {
+    "id": "57-second-largest",
+    "title": "57. Find Second Largest Number in List",
+    "category": "Lists & Tuples",
+    "tags": [
+      "Lists",
+      "Logic"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "numbers = [14, 45, 82, 33, 91, 67, 54]\nprint(\"List of numbers:\", numbers)\n\nfirst = second = float(\"-inf\")\nfor num in numbers:\n    if num > first:\n        second = first\n        first = num\n    elif num > second and num != first:\n        second = num\n\nprint(\"Largest number =\", first)\nprint(\"Second largest number =\", second)"
+  },
+  {
+    "id": "58-sum-avg-list",
+    "title": "58. Sum and Average of List Elements",
+    "category": "Lists & Tuples",
+    "tags": [
+      "Lists",
+      "Math"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "numbers = [10, 20, 30, 40, 50]\nprint(\"Numbers:\", numbers)\ntotal = sum(numbers)\naverage = total / len(numbers)\nprint(\"Sum =\", total)\nprint(\"Average =\", average)"
+  },
+  {
+    "id": "59-linear-search",
+    "title": "59. Linear Search in a List",
+    "category": "Lists & Tuples",
+    "tags": [
+      "Search",
+      "Lists"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "items = [15, 42, 8, 23, 74, 91, 33]\nprint(\"List:\", items)\ntarget = int(input(\"Enter number to search for: \"))\nfound_index = -1\nfor i in range(len(items)):\n    if items[i] == target:\n        found_index = i\n        break\nif found_index != -1:\n    print(\"Element found at index\", found_index)\nelse:\n    print(\"Element not found in list\")"
+  },
+  {
+    "id": "60-count-frequency",
+    "title": "60. Count Frequency of Element in List",
+    "category": "Lists & Tuples",
+    "tags": [
+      "Lists",
+      "Counter"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "data = [12, 5, 8, 12, 9, 12, 7, 5, 12, 3]\nprint(\"Data:\", data)\ntarget = int(input(\"Enter number to count: \"))\ncount = 0\nfor item in data:\n    if item == target:\n        count += 1\nprint(\"Element\", target, \"appears\", count, \"times\")"
+  },
+  {
+    "id": "61-remove-duplicates",
+    "title": "61. Remove Duplicates from List",
+    "category": "Lists & Tuples",
+    "tags": [
+      "Lists",
+      "Filtering"
+    ],
+    "complexity": {
+      "time": "O(n^2)",
+      "space": "O(n)"
+    },
+    "code": "numbers = [1, 2, 2, 3, 4, 4, 4, 5, 6, 6]\nprint(\"Original list:\", numbers)\nunique_list = []\nfor item in numbers:\n    if item not in unique_list:\n        unique_list.append(item)\nprint(\"List after removing duplicates:\", unique_list)"
+  },
+  {
+    "id": "62-separate-even-odd",
+    "title": "62. Separate Even & Odd into Two Lists",
+    "category": "Lists & Tuples",
+    "tags": [
+      "Lists",
+      "Conditionals"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(n)"
+    },
+    "code": "numbers = [11, 24, 35, 48, 59, 62, 77, 80]\nprint(\"Given numbers:\", numbers)\nevens = []\nodds = []\nfor num in numbers:\n    if num % 2 == 0:\n        evens.append(num)\n    else:\n        odds.append(num)\nprint(\"Even numbers:\", evens)\nprint(\"Odd numbers:\", odds)"
+  },
+  {
+    "id": "63-tuple-operations",
+    "title": "63. Tuple Indexing, Slicing & Built-ins",
+    "category": "Lists & Tuples",
+    "tags": [
+      "Tuples",
+      "Sequences"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "tup = (10, 20, 30, 40, 50, 60, 70)\nprint(\"Tuple:\", tup)\nprint(\"First element:\", tup[0])\nprint(\"Last element:\", tup[-1])\nprint(\"Sliced (index 2 to 5):\", tup[2:5])\nprint(\"Length of tuple:\", len(tup))\nprint(\"Max value:\", max(tup))\nprint(\"Min value:\", min(tup))"
+  },
+  {
+    "id": "64-char-frequency-dict",
+    "title": "64. Character Frequency Counter",
+    "category": "Dictionaries",
+    "tags": [
+      "Dictionaries",
+      "Counting"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(k)"
+    },
+    "code": "sentence = input(\"Enter a string: \")\nfreq = {}\nfor ch in sentence:\n    if ch in freq:\n        freq[ch] += 1\n    else:\n        freq[ch] = 1\nfor k, v in freq.items():\n    print(repr(k), \":\", v)"
+  },
+  {
+    "id": "65-word-frequency-dict",
+    "title": "65. Word Frequency Counter in Sentence",
+    "category": "Dictionaries",
+    "tags": [
+      "Dictionaries",
+      "Words"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(k)"
+    },
+    "code": "sentence = input(\"Enter a sentence: \")\nwords = sentence.split()\nfreq = {}\nfor w in words:\n    w_lower = w.lower()\n    freq[w_lower] = freq.get(w_lower, 0) + 1\n\nprint(\"Word Frequencies:\")\nfor word, count in freq.items():\n    print(word, \":\", count)"
+  },
+  {
+    "id": "66-student-marks-dict",
+    "title": "66. Student Roll Number and Marks Lookup",
+    "category": "Dictionaries",
+    "tags": [
+      "Dictionaries",
+      "Lookup"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(n)"
+    },
+    "code": "students = {\n    101: {\"name\": \"Aarav\", \"marks\": 94},\n    102: {\"name\": \"Diya\", \"marks\": 88},\n    103: {\"name\": \"Rohan\", \"marks\": 91}\n}\nroll = int(input(\"Enter roll number to search (101, 102, 103): \"))\nif roll in students:\n    info = students[roll]\n    print(\"Student Name:\", info[\"name\"])\n    print(\"Marks:\", info[\"marks\"])\nelse:\n    print(\"Student not found!\")"
+  },
+  {
+    "id": "67-phone-book-dict",
+    "title": "67. Menu-Driven Phone Directory",
+    "category": "Dictionaries",
+    "tags": [
+      "Dictionaries",
+      "Menu Driven"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(n)"
+    },
+    "code": "phonebook = {\"Amit\": \"9876543210\", \"Priya\": \"9123456780\"}\nprint(\"--- PHONE DIRECTORY ---\")\nprint(\"1. Search Contact\")\nprint(\"2. Add Contact\")\n\nchoice = int(input(\"Enter choice (1 or 2): \"))\nif choice == 1:\n    name = input(\"Enter contact name: \")\n    if name in phonebook:\n        print(\"Phone Number:\", phonebook[name])\n    else:\n        print(\"Contact not found\")\nelif choice == 2:\n    name = input(\"Enter new contact name: \")\n    number = input(\"Enter phone number: \")\n    phonebook[name] = number\n    print(\"Contact saved! Updated directory:\", phonebook)\nelse:\n    print(\"Invalid choice\")"
+  },
+  {
+    "id": "68-invert-dictionary",
+    "title": "68. Invert Key-Value Pairs in Dictionary",
+    "category": "Dictionaries",
+    "tags": [
+      "Dictionaries",
+      "Transformation"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(n)"
+    },
+    "code": "original = {\"apple\": \"fruit\", \"carrot\": \"vegetable\", \"banana\": \"fruit\"}\nprint(\"Original dictionary:\", original)\ninverted = {}\nfor key, value in original.items():\n    if value in inverted:\n        inverted[value].append(key)\n    else:\n        inverted[value] = [key]\nprint(\"Inverted dictionary:\", inverted)"
+  },
+  {
+    "id": "69-basic-function",
+    "title": "69. Function with Parameters & Return",
+    "category": "Functions",
+    "tags": [
+      "Functions",
+      "Basics"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "def calculate_area(length, breadth):\n    return length * breadth\n\nl = float(input(\"Enter length: \"))\nb = float(input(\"Enter breadth: \"))\nresult = calculate_area(l, b)\nprint(\"Area of rectangle =\", result)"
+  },
+  {
+    "id": "70-default-arguments",
+    "title": "70. Function with Default Arguments",
+    "category": "Functions",
+    "tags": [
+      "Functions",
+      "Arguments"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "def greet(name, msg=\"Welcome to Python Programming\"):\n    print(\"Hello\", name + \",\", msg)\n\ngreet(\"Rohan\")\ngreet(\"Pooja\", \"Have a productive coding session!\")"
+  },
+  {
+    "id": "71-return-multiple-values",
+    "title": "71. Function Returning Multiple Values",
+    "category": "Functions",
+    "tags": [
+      "Functions",
+      "Tuples"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "def arithmetic_summary(x, y):\n    s = x + y\n    d = x - y\n    p = x * y\n    return s, d, p\n\nnum1 = int(input(\"Enter first number: \"))\nnum2 = int(input(\"Enter second number: \"))\nsum_res, diff_res, prod_res = arithmetic_summary(num1, num2)\nprint(\"Sum =\", sum_res)\nprint(\"Difference =\", diff_res)\nprint(\"Product =\", prod_res)"
+  },
+  {
+    "id": "72-global-variable",
+    "title": "72. Local vs Global Scope (global keyword)",
+    "category": "Functions",
+    "tags": [
+      "Functions",
+      "Scope"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(1)"
+    },
+    "code": "counter = 100\n\ndef increment_counter():\n    global counter\n    counter += 10\n    print(\"Inside function counter =\", counter)\n\nprint(\"Before function counter =\", counter)\nincrement_counter()\nprint(\"After function counter =\", counter)"
+  },
+  {
+    "id": "73-prime-function",
+    "title": "73. Prime Number Checker Function",
+    "category": "Functions",
+    "tags": [
+      "Functions",
+      "Primes"
+    ],
+    "complexity": {
+      "time": "O(sqrt n)",
+      "space": "O(1)"
+    },
+    "code": "def is_prime(num):\n    if num <= 1:\n        return False\n    for i in range(2, int(num ** 0.5) + 1):\n        if num % i == 0:\n            return False\n    return True\n\nval = int(input(\"Enter an integer: \"))\nif is_prime(val):\n    print(val, \"is a Prime Number\")\nelse:\n    print(val, \"is Not a Prime Number\")"
+  },
+  {
+    "id": "74-binary-search",
+    "title": "74. Binary Search Algorithm",
+    "category": "Searching & Sorting",
+    "tags": [
+      "Search",
+      "Algorithms"
+    ],
+    "complexity": {
+      "time": "O(log n)",
+      "space": "O(1)"
+    },
+    "code": "def binary_search(arr, target):\n    low = 0\n    high = len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n\nsorted_list = [10, 23, 35, 48, 59, 70, 85, 96]\nprint(\"Sorted array:\", sorted_list)\nval = int(input(\"Enter value to search: \"))\npos = binary_search(sorted_list, val)\nif pos != -1:\n    print(\"Target found at index\", pos)\nelse:\n    print(\"Target not found in array\")"
+  },
+  {
+    "id": "75-bubble-sort",
+    "title": "75. Bubble Sort Algorithm",
+    "category": "Searching & Sorting",
+    "tags": [
+      "Sorting",
+      "Algorithms"
+    ],
+    "complexity": {
+      "time": "O(n^2)",
+      "space": "O(1)"
+    },
+    "code": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        swapped = False\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n                swapped = True\n        if not swapped:\n            break\n\nnumbers = [64, 34, 25, 12, 22, 11, 90]\nprint(\"Original array:\", numbers)\nbubble_sort(numbers)\nprint(\"Sorted array:\", numbers)"
+  },
+  {
+    "id": "76-insertion-sort",
+    "title": "76. Insertion Sort Algorithm",
+    "category": "Searching & Sorting",
+    "tags": [
+      "Sorting",
+      "Algorithms"
+    ],
+    "complexity": {
+      "time": "O(n^2)",
+      "space": "O(1)"
+    },
+    "code": "def insertion_sort(arr):\n    for i in range(1, len(arr)):\n        key = arr[i]\n        j = i - 1\n        while j >= 0 and arr[j] > key:\n            arr[j + 1] = arr[j]\n            j -= 1\n        arr[j + 1] = key\n\nnumbers = [12, 11, 13, 5, 6]\nprint(\"Original array:\", numbers)\ninsertion_sort(numbers)\nprint(\"Sorted array:\", numbers)"
+  },
+  {
+    "id": "77-selection-sort",
+    "title": "77. Selection Sort Algorithm",
+    "category": "Searching & Sorting",
+    "tags": [
+      "Sorting",
+      "Algorithms"
+    ],
+    "complexity": {
+      "time": "O(n^2)",
+      "space": "O(1)"
+    },
+    "code": "def selection_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        min_idx = i\n        for j in range(i + 1, n):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n\ndata = [64, 25, 12, 22, 11]\nprint(\"Original list:\", data)\nselection_sort(data)\nprint(\"Sorted list using Selection Sort:\", data)"
+  },
+  {
+    "id": "78-stack-operations",
+    "title": "78. Stack Implementation using List",
+    "category": "Data Structures",
+    "tags": [
+      "Stack",
+      "LIFO"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(n)"
+    },
+    "code": "stack = []\n\ndef push(item):\n    stack.append(item)\n    print(\"Pushed:\", item)\n\ndef pop():\n    if len(stack) == 0:\n        print(\"Stack Underflow! Stack is empty.\")\n    else:\n        removed = stack.pop()\n        print(\"Popped element:\", removed)\n\ndef peek():\n    if len(stack) == 0:\n        print(\"Stack is empty.\")\n    else:\n        print(\"Top element is:\", stack[-1])\n\ndef display():\n    if len(stack) == 0:\n        print(\"Stack is empty.\")\n    else:\n        print(\"Stack elements (bottom to top):\", stack)\n\npush(10)\npush(20)\npush(30)\ndisplay()\npeek()\npop()\ndisplay()"
+  },
+  {
+    "id": "79-queue-operations",
+    "title": "79. Queue Implementation using List",
+    "category": "Data Structures",
+    "tags": [
+      "Queue",
+      "FIFO"
+    ],
+    "complexity": {
+      "time": "O(1)",
+      "space": "O(n)"
+    },
+    "code": "queue = []\n\ndef enqueue(item):\n    queue.append(item)\n    print(\"Enqueued:\", item)\n\ndef dequeue():\n    if len(queue) == 0:\n        print(\"Queue Underflow! Queue is empty.\")\n    else:\n        removed = queue.pop(0)\n        print(\"Dequeued element:\", removed)\n\ndef peek():\n    if len(queue) == 0:\n        print(\"Queue is empty.\")\n    else:\n        print(\"Front element is:\", queue[0])\n\ndef display():\n    if len(queue) == 0:\n        print(\"Queue is empty.\")\n    else:\n        print(\"Queue elements:\", queue)\n\nenqueue(\"Alpha\")\nenqueue(\"Beta\")\nenqueue(\"Gamma\")\ndisplay()\npeek()\ndequeue()\ndisplay()"
+  },
+  {
+    "id": "80-recursive-factorial",
+    "title": "80. Factorial using Recursion",
+    "category": "Recursion & Files",
+    "tags": [
+      "Recursion",
+      "Math"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(n)"
+    },
+    "code": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)\n\nnum = int(input(\"Enter a positive integer: \"))\nprint(\"Factorial of\", num, \"using recursion =\", factorial(num))"
+  },
+  {
+    "id": "81-recursive-fibonacci",
+    "title": "81. Fibonacci using Recursion",
+    "category": "Recursion & Files",
+    "tags": [
+      "Recursion",
+      "Series"
+    ],
+    "complexity": {
+      "time": "O(2^n)",
+      "space": "O(n)"
+    },
+    "code": "def fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        return fibonacci(n - 1) + fibonacci(n - 2)\n\nterms = int(input(\"Enter number of terms: \"))\nprint(\"Fibonacci series:\")\nfor i in range(terms):\n    print(fibonacci(i), end=\" \")\nprint()"
+  },
+  {
+    "id": "82-text-file-write-read",
+    "title": "82. Text File Write and Read",
+    "category": "Recursion & Files",
+    "tags": [
+      "Files",
+      "I/O"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(n)"
+    },
+    "code": "with open(\"student_notes.txt\", \"w\") as f:\n    f.write(\"Line 1: Python programming fundamentals\\n\")\n    f.write(\"Line 2: Class 11 and 12 Computer Science\\n\")\n    f.write(\"Line 3: File handling in Python\\n\")\n\nprint(\"File written successfully. Reading back file content:\")\nwith open(\"student_notes.txt\", \"r\") as f:\n    content = f.read()\n    print(content)"
+  },
+  {
+    "id": "83-text-file-count-lines",
+    "title": "83. Count Lines, Words & Chars in File",
+    "category": "Recursion & Files",
+    "tags": [
+      "Files",
+      "Parsing"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "sample_text = \"Python is an interpreted programming language.\\nIt has clean and readable syntax.\\nWidely used in CBSE CS curriculum.\"\n\nwith open(\"sample.txt\", \"w\") as f:\n    f.write(sample_text)\n\nlines = words = chars = 0\nwith open(\"sample.txt\", \"r\") as f:\n    for line in f:\n        lines += 1\n        words += len(line.split())\n        chars += len(line)\n\nprint(\"Total Lines:\", lines)\nprint(\"Total Words:\", words)\nprint(\"Total Characters:\", chars)"
+  },
+  {
+    "id": "84-filter-lines-by-letter",
+    "title": "84. Filter Lines Starting with Letter",
+    "category": "Recursion & Files",
+    "tags": [
+      "Files",
+      "Board Exam"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "code": "content = \"\"\"Python is widely used in AI.\nProgramming in Python is simple.\nData structures include lists and dictionaries.\nPractice makes a student proficient.\"\"\"\n\nwith open(\"story.txt\", \"w\") as f:\n    f.write(content)\n\ntarget_char = input(\"Enter letter to filter lines by (e.g. P): \").upper()\ncount = 0\n\nwith open(\"story.txt\", \"r\") as f:\n    for line in f:\n        line = line.strip()\n        if line and line[0].upper() == target_char:\n            print(\"Matching line:\", line)\n            count += 1\n\nprint(\"Total lines starting with\", target_char, \"=\", count)"
+  },
+  {
+    "id": "85-csv-file-operations",
+    "title": "85. CSV File Handling with csv Module",
+    "category": "Recursion & Files",
+    "tags": [
+      "csv",
+      "File I/O"
+    ],
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(n)"
+    },
+    "code": "import csv\n\ndata = [\n    [\"Roll\", \"Name\", \"Score\"],\n    [1, \"Aditya\", 95],\n    [2, \"Meera\", 89],\n    [3, \"Kavya\", 92]\n]\n\nwith open(\"report.csv\", \"w\", newline=\"\") as f:\n    writer = csv.writer(f)\n    writer.writerows(data)\n\nprint(\"CSV file written. Reading back rows:\")\nwith open(\"report.csv\", \"r\") as f:\n    reader = csv.reader(f)\n    for row in reader:\n        print(row)"
+  }
+]
