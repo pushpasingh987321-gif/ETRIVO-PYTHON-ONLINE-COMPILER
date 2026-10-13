@@ -837,6 +837,8 @@
     let toastTimeout = null;
     let currentOutputLine = null;
     let refreshScheduled = false;
+    let saveDraftTimeout = null;
+    const virtualFS = new Map();
 
     /* DOM Elements */
     const runBtn = document.getElementById('runBtn');
@@ -915,7 +917,9 @@
         } catch (e) {}
       }
       if (activeInlineInput) {
-        if (activeInlineInput.parentNode) {
+        if (activeInlineInput.form && activeInlineInput.form.parentNode) {
+          activeInlineInput.form.remove();
+        } else if (activeInlineInput.parentNode) {
           activeInlineInput.remove();
         }
         activeInlineInput = null;
@@ -981,6 +985,8 @@
     function initEditor() {
       codeEditorContainer.innerHTML = '';
 
+      const isMobileDevice = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
       editor = CodeMirror(codeEditorContainer, {
         value: '# Hello World in Python\nprint("Hello, World!")\n',
         mode: { name: 'python', version: 3, singleLineStringErrors: false },
@@ -994,6 +1000,9 @@
         indentWithTabs: false,
         lineWrapping: true,
         autofocus: true,
+        viewportMargin: 30,
+        maxHighlightLength: 100000,
+        inputStyle: isMobileDevice ? 'contenteditable' : 'textarea',
         extraKeys: {
           "Tab": function(cm) {
             if (cm.somethingSelected()) {
@@ -1022,9 +1031,22 @@
       editor.on('cursorActivity', updateEditorStats);
       editor.on('change', () => {
         updateEditorStats();
-        try {
-          localStorage.setItem('etrivo_code_draft', editor.getValue());
-        } catch (e) {}
+        if (saveDraftTimeout) clearTimeout(saveDraftTimeout);
+        saveDraftTimeout = setTimeout(() => {
+          try {
+            localStorage.setItem('etrivo_code_draft', editor.getValue());
+          } catch (e) {}
+        }, 400);
+      });
+
+      // Smooth handling for large pastes
+      editor.getWrapperElement().addEventListener('paste', () => {
+        setTimeout(() => {
+          if (editor) {
+            editor.refresh();
+            updateEditorStats();
+          }
+        }, 20);
       });
 
       const defaultHelloWorld = '# Hello World in Python\nprint("Hello, World!")\n';
@@ -1051,8 +1073,213 @@
       requestEditorRefresh();
     }
 
-    /* Skulpt Engine File Loader */
+    /* Split text into lines matching Python's line-reading semantics */
+    function splitFileLines(text) {
+      if (!text) return [];
+      const lines = [];
+      let start = 0;
+      for (let i = 0; i < text.length; i++) {
+        if (text[i] === '\n') {
+          lines.push(text.slice(start, i + 1));
+          start = i + 1;
+        }
+      }
+      if (start < text.length) {
+        lines.push(text.slice(start));
+      }
+      return lines;
+    }
+
+    /* Embedded Pure Python CSV Module Polyfill for In-Browser Skulpt */
+    const CSV_POLYFILL_CODE = `
+class writer:
+    def __init__(self, fileobj, delimiter=',', quotechar='"', lineterminator='\\n', **kwargs):
+        self.fileobj = fileobj
+        self.delimiter = delimiter
+        self.quotechar = quotechar
+        self.lineterminator = lineterminator
+
+    def writerow(self, row):
+        formatted = []
+        for item in row:
+            s = str(item)
+            if self.delimiter in s or self.quotechar in s or '\\n' in s or '\\r' in s:
+                s = self.quotechar + s.replace(self.quotechar, self.quotechar * 2) + self.quotechar
+            formatted.append(s)
+        line = self.delimiter.join(formatted) + self.lineterminator
+        self.fileobj.write(line)
+
+    def writerows(self, rows):
+        for row in rows:
+            self.writerow(row)
+
+class reader:
+    def __init__(self, fileobj, delimiter=',', quotechar='"', **kwargs):
+        self.fileobj = fileobj
+        self.delimiter = delimiter
+        self.quotechar = quotechar
+        if hasattr(fileobj, 'readlines'):
+            self.lines = fileobj.readlines()
+        elif hasattr(fileobj, '__iter__'):
+            self.lines = list(fileobj)
+        else:
+            self.lines = []
+        self._idx = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self._idx >= len(self.lines):
+            raise StopIteration
+        line = self.lines[self._idx]
+        self._idx += 1
+        return self._parse_line(line)
+
+    def next(self):
+        return self.__next__()
+
+    def _parse_line(self, line):
+        line = line.rstrip('\\r\\n')
+        if not line:
+            return []
+        tokens = []
+        in_quote = False
+        current = []
+        i = 0
+        while i < len(line):
+            ch = line[i]
+            if in_quote:
+                if ch == self.quotechar:
+                    if i + 1 < len(line) and line[i + 1] == self.quotechar:
+                        current.append(self.quotechar)
+                        i += 1
+                    else:
+                        in_quote = False
+                else:
+                    current.append(ch)
+            else:
+                if ch == self.quotechar:
+                    in_quote = True
+                elif ch == self.delimiter:
+                    tokens.append(''.join(current))
+                    current = []
+                else:
+                    current.append(ch)
+            i += 1
+        tokens.append(''.join(current))
+        return tokens
+
+class DictWriter:
+    def __init__(self, fileobj, fieldnames, delimiter=',', quotechar='"', lineterminator='\\n', **kwargs):
+        self.writer = writer(fileobj, delimiter=delimiter, quotechar=quotechar, lineterminator=lineterminator, **kwargs)
+        self.fieldnames = fieldnames
+
+    def writeheader(self):
+        self.writer.writerow(self.fieldnames)
+
+    def writerow(self, rowdict):
+        row = [rowdict.get(k, '') for k in self.fieldnames]
+        self.writer.writerow(row)
+
+    def writerows(self, rowdicts):
+        for r in rowdicts:
+            self.writerow(r)
+
+class DictReader:
+    def __init__(self, fileobj, fieldnames=None, delimiter=',', quotechar='"', **kwargs):
+        self.reader = reader(fileobj, delimiter=delimiter, quotechar=quotechar, **kwargs)
+        if fieldnames is None:
+            self.fieldnames = next(self.reader)
+        else:
+            self.fieldnames = fieldnames
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        row = next(self.reader)
+        return dict(zip(self.fieldnames, row))
+
+    def next(self):
+        return self.__next__()
+`;
+
+    /* In-Memory Virtual File System Setup (Supports 'w', 'r', 'a', 'wb', 'rb', and with open(...) as f) */
+    function setupVirtualFileSystem() {
+      if (typeof Sk === 'undefined') return;
+
+      Sk.nonreadopen = true;
+
+      // Register pure Python CSV polyfill
+      if (Sk.builtinFiles && Sk.builtinFiles.files) {
+        Sk.builtinFiles.files['src/lib/csv.py'] = CSV_POLYFILL_CODE;
+      }
+
+      // Intercept file write operations into virtualFS
+      Sk.filewrite = function(fileObj, dataPy) {
+        const text = Sk.ffi.remapToJs(dataPy);
+        const fname = fileObj.name;
+        let content = virtualFS.get(fname) || '';
+        content += text;
+        virtualFS.set(fname, content);
+        fileObj.data$ = content;
+        fileObj.lineList = splitFileLines(content);
+      };
+
+      // Comprehensive open() replacement supporting positional and keyword arguments (e.g. newline="")
+      function customOpenFile(args, kwargs) {
+        const filenamePy = args[0];
+        let modePy = args[1];
+        if (!modePy && kwargs) {
+          for (let i = 0; i < kwargs.length; i += 2) {
+            if (kwargs[i] === 'mode') modePy = kwargs[i + 1];
+          }
+        }
+        const filename = Sk.ffi.remapToJs(filenamePy);
+        const mode = modePy ? Sk.ffi.remapToJs(modePy) : 'r';
+
+        const isWrite = mode.includes('w');
+        const isAppend = mode.includes('a');
+        const isRead = mode.includes('r') || (!isWrite && !isAppend);
+
+        if (isWrite) {
+          virtualFS.set(filename, '');
+        } else if (isAppend) {
+          if (!virtualFS.has(filename)) virtualFS.set(filename, '');
+        } else if (isRead) {
+          if (!virtualFS.has(filename)) {
+            if (Sk.builtinFiles && Sk.builtinFiles.files && Sk.builtinFiles.files[filename]) {
+              virtualFS.set(filename, Sk.builtinFiles.files[filename]);
+            } else {
+              throw new Sk.builtin.IOError("[Errno 2] No such file or directory: '" + filename + "'");
+            }
+          }
+        }
+
+        const fileObj = Object.create(Sk.builtin.file.prototype);
+        fileObj.name = filename;
+        fileObj.mode = modePy || new Sk.builtin.str(mode);
+        fileObj.closed = false;
+        fileObj.fileno = 10;
+        fileObj.data$ = virtualFS.get(filename) || '';
+        fileObj.lineList = splitFileLines(fileObj.data$);
+        fileObj.currentLine = 0;
+        fileObj.pos$ = isAppend ? fileObj.data$.length : 0;
+        return fileObj;
+      }
+
+      Sk.builtin.open = function(a, c) { return customOpenFile([a, c], []); };
+      if (Sk.builtins && Sk.builtins.open) {
+        Sk.builtins.open['tp$call'] = customOpenFile;
+      }
+    }
+
+    /* Skulpt Engine File Loader (checks Virtual File System first, then stdlib) */
     function builtinRead(file) {
+      if (virtualFS.has(file)) {
+        return virtualFS.get(file);
+      }
       if (typeof Sk === 'undefined' || Sk.builtinFiles === undefined || Sk.builtinFiles["files"][file] === undefined) {
         throw "File not found: '" + file + "'";
       }
@@ -1062,6 +1289,7 @@
     /* Verify Python Engine Availability */
     function checkPythonEngine() {
       if (typeof Sk !== 'undefined') {
+        setupVirtualFileSystem();
         engineStatusDot.className = 'w-1.5 h-1.5 rounded-full bg-[#c89f6e] shadow-[0_0_8px_#c89f6e]';
         engineStatusText.textContent = 'Python Ready';
         runBtn.disabled = false;
@@ -1072,16 +1300,26 @@
       }
     }
 
+    /* Focus active terminal input on click or touch anywhere inside terminal */
     consoleContainer.addEventListener('click', () => {
       if (activeInlineInput && !window.getSelection().toString()) {
         activeInlineInput.focus();
+      }
+    });
+    consoleContainer.addEventListener('touchend', (e) => {
+      if (activeInlineInput && !window.getSelection().toString()) {
+        if (e.target !== activeInlineInput) {
+          activeInlineInput.focus();
+        }
       }
     });
 
     function clearConsole() {
       currentOutputLine = null;
       if (activeInlineInput) {
-        if (activeInlineInput.parentNode) {
+        if (activeInlineInput.form && activeInlineInput.form.parentNode) {
+          activeInlineInput.form.remove();
+        } else if (activeInlineInput.parentNode) {
           activeInlineInput.remove();
         }
         activeInlineInput = null;
@@ -1161,6 +1399,9 @@
       runBtnText.textContent = 'Running';
 
       clearConsole();
+      virtualFS.clear();
+      setupVirtualFileSystem();
+
       appendConsoleLine('▶ Execution commenced', 'system');
 
       const startTime = performance.now();
@@ -1177,7 +1418,7 @@
             }
 
             const inputRow = document.createElement('div');
-            inputRow.className = 'break-all whitespace-pre-wrap leading-relaxed font-mono flex items-center flex-wrap gap-x-1.5';
+            inputRow.className = 'break-all whitespace-pre-wrap leading-relaxed font-mono flex items-center flex-wrap gap-x-1.5 cursor-text select-text';
 
             if (prompt) {
               const promptSpan = document.createElement('span');
@@ -1186,52 +1427,111 @@
               inputRow.appendChild(promptSpan);
             }
 
+            const inputForm = document.createElement('form');
+            inputForm.action = 'javascript:void(0);';
+            inputForm.autocomplete = 'off';
+            inputForm.className = 'flex-1 inline-flex items-center min-w-[80px] p-0 m-0';
+
             const inlineInput = document.createElement('input');
             inlineInput.type = 'text';
             inlineInput.autocomplete = 'off';
             inlineInput.autocapitalize = 'off';
             inlineInput.spellcheck = false;
-            inlineInput.className = 'flex-1 min-w-[80px] bg-transparent border-0 outline-none p-0 m-0 font-mono text-[13px] sm:text-[14px] text-zinc-100 caret-[#c89f6e] focus:ring-0 shadow-none';
+            inlineInput.className = 'w-full flex-1 bg-transparent border-0 outline-none p-0 m-0 font-mono text-[13px] sm:text-[14px] text-zinc-100 caret-[#c89f6e] focus:ring-0 shadow-none';
 
-            inputRow.appendChild(inlineInput);
+            inputForm.appendChild(inlineInput);
+            inputRow.appendChild(inputForm);
             consoleContainer.appendChild(inputRow);
             consoleContainer.scrollTop = consoleContainer.scrollHeight;
 
             activeInlineInput = inlineInput;
+            const inputWaitStart = Date.now();
+            let isSubmitted = false;
 
-            activeInputResolve = function(val) {
+            function submitInput() {
+              if (isSubmitted) return;
+              isSubmitted = true;
+              const submittedVal = inlineInput.value;
               activeInlineInput = null;
-              if (inlineInput.parentNode) {
-                inlineInput.remove();
+              activeInputResolve = null;
+
+              if (inputForm.parentNode) {
+                inputForm.remove();
               }
               const enteredSpan = document.createElement('span');
               enteredSpan.className = 'text-zinc-100 font-normal';
-              enteredSpan.textContent = val;
+              enteredSpan.textContent = submittedVal;
               inputRow.appendChild(enteredSpan);
               currentOutputLine = null;
-              resolve(val);
+
+              // Ensure time spent waiting for user input does not penalize program timeout
+              if (typeof Sk !== 'undefined' && Sk.execStart) {
+                Sk.execStart += (Date.now() - inputWaitStart);
+              }
+              if (typeof Sk !== 'undefined') {
+                Sk.lastYield = Date.now();
+              }
+
+              consoleContainer.scrollTop = consoleContainer.scrollHeight;
+              resolve(submittedVal);
+            }
+
+            activeInputResolve = function(val) {
+              if (isSubmitted) return;
+              isSubmitted = true;
+              activeInlineInput = null;
+              if (inputForm.parentNode) {
+                inputForm.remove();
+              }
+              const enteredSpan = document.createElement('span');
+              enteredSpan.className = 'text-zinc-100 font-normal';
+              enteredSpan.textContent = val || '';
+              inputRow.appendChild(enteredSpan);
+              currentOutputLine = null;
+              resolve(val || '');
             };
 
+            // Form submit covers mobile soft-keyboard "Done", "Go", "Enter" buttons
+            inputForm.addEventListener('submit', function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              submitInput();
+            });
+
+            // Keydown covers desktop Enter and mobile Enter (keyCode 13)
             inlineInput.addEventListener('keydown', function(e) {
-              if (e.key === 'Enter') {
+              if (e.key === 'Enter' || e.keyCode === 13 || e.which === 13) {
                 e.preventDefault();
                 e.stopPropagation();
-                if (e.repeat || e.isComposing) return;
-                const submittedVal = inlineInput.value;
-                const resolver = activeInputResolve;
-                if (resolver) {
-                  activeInputResolve = null;
-                  resolver(submittedVal);
-                }
+                submitInput();
               }
             });
 
-            setTimeout(() => {
+            // Keyup fallback for virtual keyboards that drop keydown events
+            inlineInput.addEventListener('keyup', function(e) {
+              if (e.key === 'Enter' || e.keyCode === 13 || e.which === 13) {
+                e.preventDefault();
+                e.stopPropagation();
+                submitInput();
+              }
+            });
+
+            inputRow.addEventListener('click', function() {
               inlineInput.focus();
-            }, 50);
+            });
+
+            setTimeout(() => {
+              try {
+                inlineInput.focus();
+                inlineInput.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              } catch (err) {}
+            }, 30);
           });
         },
         inputfunTakesPrompt: true,
+        yieldLimit: 100,
+        execLimit: 25000,
+        nonreadopen: true,
         __future__: Sk.python3
       });
 
